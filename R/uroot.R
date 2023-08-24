@@ -24,5 +24,5 @@ wf1= paste0("%wf=", shQuote_cmd(wf))
 info= paste0("%info=", shQuote_cmd(info))
 
 EviewsR::export_dataframe(x,wf=wf)
-writeLines(c(wf1,info))
+writeLines(c(wf1,info),"somefile.prg")
 }
