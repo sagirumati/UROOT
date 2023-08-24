@@ -13,6 +13,8 @@
 #   Install Package:           'Ctrl + Shift + B'
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
+#| @import EviewsR
+
 
 uroot <- function(x,test=c("adf","pp"),info="sic") {
   if(is.data.frame(x)) variables=colnames(x) else variables="uroot"
@@ -20,6 +22,7 @@ uroot <- function(x,test=c("adf","pp"),info="sic") {
 wf=tempfile("uroot",fileext = ".wf1")
 wf1= paste0("%wf=", shQuote_cmd(wf))
 info= paste0("%info=", shQuote_cmd(info))
-EviewsR::export_dataframe(x,wf=wf)
 
+EviewsR::export_dataframe(x,wf=wf)
+writeLines(c(wf1,info))
 }
