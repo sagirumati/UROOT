@@ -198,6 +198,11 @@ next
 next
 
 
+'DELETE FIRST COLUMN OF THE ADF AND PP TABLES as it is empty
+{%test_type}_table.deletecol(A) 1
+
+
+
 'DELETE THE UNNECESSARY TABLES
 FOR !j=1 to !vnum
 for %k {%x{!j}}
