@@ -1,6 +1,3 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
 #' Conduct unit root test using `EViews` routines
 #'
 #' Use this function to conduct unit root test using `EViews` routines
