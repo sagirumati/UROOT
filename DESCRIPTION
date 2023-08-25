@@ -4,7 +4,7 @@ Title: Conduct Unit Root Tests Using EViews Routines
 Version: 0.1.0
 Author: Sagiru Mati
 Maintainer: The package maintainer <sagirumati@gmail.com>
-Description: Conduct unit root tests based 'EViews' (Econometric Views) routines. EViews is a commercial software for econometrics
+Description: Conduct unit root tests based 'EViews' (Econometric Views) routines. EViews is a commercial software for econometrics.
 License: GPL
 Encoding: UTF-8
 LazyData: true
