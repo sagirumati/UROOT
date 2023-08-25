@@ -2,6 +2,7 @@ Package: UROOT
 Type: Package
 Title: Conduct Unit Root Tests Using EViews Routines
 Version: 0.1.0
+Imports: EviewsR, knitr, magrittr, xts, zoo
 Author: Sagiru Mati
 Maintainer: The package maintainer <sagirumati@gmail.com>
 Description: Conduct unit root tests based 'EViews' (Econometric Views) routines. EViews is a commercial software for econometrics.

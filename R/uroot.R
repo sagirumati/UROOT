@@ -1,37 +1,39 @@
 #' Conduct unit root test using `EViews` routines
 #'
 #' Use this function to conduct unit root test using `EViews` routines
+#' @param series A vector of names or wildcard expressions for series object(s) contained in a dataframe.
+#' @param  test Name of the unit root test. For example, `ADF`, `PP`.
+#' @param info Name of the information criterion. For example, `SIC`, `AIC`, `HQ`.
 
 #' @return An EViews workfile
 #'
-#' @examples library(EviewsR)
+#' @examples library(UROOT)
 #' \dontrun{
-#' demo(exec_commands)
-#'
-#' eviews_graph(wf="exec_commands",page = "eviewspage1",series="x y",mode = "overwrite",
-#' graph_options = "m")
-#'
-#' # Create graph(s) from dataframe
-#'
 #' Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
+#' uroot(series=Data,test="ADF",info="sic")
 #'
-#' eviews_graph(series=Data,start_date=1990,frequency="m")
-#'
-#' # Create graphs in one frame (group=TRUE)
-#'
-#' eviews_graph(series=Data,group=TRUE,start_date="1990Q4",frequency="Q")
 #'}
 #' @family important functions
 #' @keywords documentation
 #' @export
 
-uroot <- function(x,test=c("adf","pp"),info="sic") {
-  if(is.data.frame(x)) variables=colnames(x) else variables="uroot"
+uroot <- function(series,test=c("adf","pp"),info="sic") {
+  if(!is.data.frame(series)) series=as.data.frame(series)
+  series=colnames(series) %>% paste(collapse = ",")
+  test=colnames(test) %>% paste(collapse = " ")
 
 wf=tempfile("uroot",fileext = ".wf1")
 wf1= paste0("%wf=", shQuote_cmd(wf))
+
+file=tempfile("uroot",fileext = ".prg")
+series= paste0("%series=", shQuote_cmd(series))
+test= paste0("%test=", shQuote_cmd(test))
 info= paste0("%info=", shQuote_cmd(info))
 
-EviewsR::export_dataframe(x,wf=wf)
-writeLines(c(wf1,info),"somefile1.prg")
+
+
+export_dataframe(series,wf=wf)
+writeLines(c(series,test,wf1,info,EviewsCodes),file)
+system_exec(file)
 }
+

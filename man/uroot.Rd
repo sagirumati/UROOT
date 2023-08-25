@@ -4,7 +4,14 @@
 \alias{uroot}
 \title{Conduct unit root test using `EViews` routines}
 \usage{
-uroot(x, test = c("adf", "pp"), info = "sic")
+uroot(series, test = c("adf", "pp"), info = "sic")
+}
+\arguments{
+\item{series}{A vector of names or wildcard expressions for series object(s) contained in a dataframe.}
+
+\item{test}{Name of the unit root test. For example, `ADF`, `PP`.}
+
+\item{info}{Name of the information criterion. For example, `SIC`, `AIC`, `HQ`.}
 }
 \value{
 An EViews workfile
@@ -13,22 +20,11 @@ An EViews workfile
 Use this function to conduct unit root test using `EViews` routines
 }
 \examples{
-library(EviewsR)
+library(UROOT)
 \dontrun{
-demo(exec_commands)
-
-eviews_graph(wf="exec_commands",page = "eviewspage1",series="x y",mode = "overwrite",
-graph_options = "m")
-
-# Create graph(s) from dataframe
-
 Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
+uroot(series=Data,test="ADF",info="sic")
 
-eviews_graph(series=Data,start_date=1990,frequency="m")
-
-# Create graphs in one frame (group=TRUE)
-
-eviews_graph(series=Data,group=TRUE,start_date="1990Q4",frequency="Q")
 }
 }
 \concept{important functions}
