@@ -127,19 +127,17 @@ as shown below :
 
 <table>
 <colgroup>
-<col style="width: 3%" />
 <col style="width: 10%" />
 <col style="width: 6%" />
 <col style="width: 9%" />
-<col style="width: 19%" />
+<col style="width: 20%" />
 <col style="width: 10%" />
 <col style="width: 11%" />
-<col style="width: 19%" />
+<col style="width: 20%" />
 <col style="width: 9%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"></th>
 <th style="text-align: left;">Variables</th>
 <th style="text-align: right;">None</th>
 <th style="text-align: right;">Constant</th>
@@ -152,25 +150,23 @@ as shown below :
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">NA</td>
 <td style="text-align: left;">X</td>
-<td style="text-align: right;">2.569</td>
-<td style="text-align: right;">-0.425</td>
-<td style="text-align: right;">-3.953</td>
-<td style="text-align: left;">-1.402***</td>
-<td style="text-align: left;">-11.474***</td>
-<td style="text-align: left;">-11.409***</td>
+<td style="text-align: right;">2.166</td>
+<td style="text-align: right;">0.271</td>
+<td style="text-align: right;">-1.597</td>
+<td style="text-align: left;">-1.372***</td>
+<td style="text-align: left;">-10.155***</td>
+<td style="text-align: left;">-10.115***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">NA</td>
 <td style="text-align: left;">Y</td>
-<td style="text-align: right;">1.750</td>
-<td style="text-align: right;">-1.184</td>
-<td style="text-align: right;">-0.850</td>
-<td style="text-align: left;">-0.937***</td>
-<td style="text-align: left;">-9.566***</td>
-<td style="text-align: left;">-9.662***</td>
+<td style="text-align: right;">2.283</td>
+<td style="text-align: right;">0.143</td>
+<td style="text-align: right;">-4.154</td>
+<td style="text-align: left;">-0.811***</td>
+<td style="text-align: left;">-12.917***</td>
+<td style="text-align: left;">-12.855***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 </tbody>
