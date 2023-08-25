@@ -1,2 +1,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^README\.Rmd$
+^sagiru$
+CODE_OF_CONDUCT.md
+LICENCE
+inst/EVIEWS
+^\.github$
