@@ -4,6 +4,8 @@
 #' @param series A vector of names or wildcard expressions for series object(s) contained in a dataframe.
 #' @param  test Name of the unit root test. For example, `ADF`, `PP`.
 #' @param info Name of the information criterion. For example, `SIC`, `AIC`, `HQ`.
+#' @param caption Table caption as in `kable`.
+#' @param format Table format in `kable`.
 
 #' @return An EViews workfile
 #'
@@ -17,10 +19,15 @@
 #' @keywords documentation
 #' @export
 
-uroot <- function(series,test=c("adf","pp"),info="sic") {
+uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,format=kable_format()) {
   if(is.data.frame(series)) dataFrame=series else dataFrame=as.data.frame(series)
+
+
+  table=paste0(test,"_table") # for import_kable function
+
   series=colnames(dataFrame) %>% paste(collapse = ",")
-  test=paste(test,collapse = " ")
+   test=paste(test,collapse = " ")
+
 
 wf=tempfile("uroot",".",fileext = ".wf1")
 wf1= paste0("%wf=", shQuote_cmd(wf))
@@ -221,7 +228,13 @@ export_dataframe(dataFrame,wf=wf)
 writeLines(c(eviews_path(),series,test,wf1,info,EviewsCodes),fileName)
 
 system_exec()
+unlink_eviews()
+
 wf=paste0(getwd(),"\\",wf) %>% shQuote_cmd
-import_kable(wf,table="adf_table",format = "markdown")
+
+if(length(table)>1){
+for (i in table) import_kable(wf,table=i,caption = caption, format=format) %>% cat
+} else import_kable(wf,table=table,caption = caption, format=format)
+
 }
 

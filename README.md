@@ -1,15 +1,14 @@
 # UROOT: A Seamless Integration of EViews and R
 
-# Friday: August 25, 2023
+# Saturday: August 26, 2023
 
 <!-- <img src="inst/figures/UROOT.png" align="right" width="120" /> -->
 
 <!-- badges: start -->
-
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/UROOT)](https://cran.r-project.org/package=UROOT)
-[![CRAN\_Status\_Badge](https://cranlogs.r-pkg.org/badges/grand-total/UROOT?color=49C31B)](https://cranlogs.r-pkg.org/badges/grand-total/UROOT?color=49C31B)
-[![](https://cranlogs.r-pkg.org/badges/UROOT?color=49C31B)](https://cranlogs.r-pkg.org/badges/UROOT?color=49C31B)
-[![R-CMD-check](https://github.com/sagirumati/UROOT/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/sagirumati/UROOT/actions/workflows/check-standard.yaml)
+<!-- [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/UROOT)](https://cran.r-project.org/package=UROOT) -->
+<!-- [![CRAN_Status_Badge](https://cranlogs.r-pkg.org/badges/grand-total/UROOT?color=49C31B)](https://cranlogs.r-pkg.org/badges/grand-total/UROOT?color=49C31B) -->
+<!-- [![](https://cranlogs.r-pkg.org/badges/UROOT?color=49C31B)](https://cranlogs.r-pkg.org/badges/UROOT?color=49C31B) -->
+<!-- [![R-CMD-check](https://github.com/sagirumati/UROOT/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/sagirumati/UROOT/actions/workflows/check-standard.yaml) -->
 <!-- badges: end -->
 
 # 1 About the Author
@@ -125,49 +124,40 @@ After loading the package, a chunk for Eviews can be created by
 supplying `eviews` as the engine name in R Markdown or Quarto document
 as shown below :
 
-<table>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 6%" />
-<col style="width: 9%" />
-<col style="width: 20%" />
-<col style="width: 10%" />
-<col style="width: 11%" />
-<col style="width: 20%" />
-<col style="width: 9%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Variables</th>
-<th style="text-align: right;">None</th>
-<th style="text-align: right;">Constant</th>
-<th style="text-align: right;">Constant and trend</th>
-<th style="text-align: left;">None</th>
-<th style="text-align: left;">Constant</th>
-<th style="text-align: left;">Constant and trend</th>
-<th style="text-align: left;">Decision</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">X</td>
-<td style="text-align: right;">2.166</td>
-<td style="text-align: right;">0.271</td>
-<td style="text-align: right;">-1.597</td>
-<td style="text-align: left;">-1.372***</td>
-<td style="text-align: left;">-10.155***</td>
-<td style="text-align: left;">-10.115***</td>
-<td style="text-align: left;">I(1)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Y</td>
-<td style="text-align: right;">2.283</td>
-<td style="text-align: right;">0.143</td>
-<td style="text-align: right;">-4.154</td>
-<td style="text-align: left;">-0.811***</td>
-<td style="text-align: left;">-12.917***</td>
-<td style="text-align: left;">-12.855***</td>
-<td style="text-align: left;">I(1)</td>
-</tr>
-</tbody>
-</table>
+    #> <table>
+    #> <caption>(\#tab:UROOT)sagiru mati</caption>
+    #>  <thead>
+    #>   <tr>
+    #>    <th style="text-align:left;"> Variables </th>
+    #>    <th style="text-align:right;"> None </th>
+    #>    <th style="text-align:right;"> Constant </th>
+    #>    <th style="text-align:right;"> Constant and trend </th>
+    #>    <th style="text-align:left;"> None </th>
+    #>    <th style="text-align:left;"> Constant </th>
+    #>    <th style="text-align:left;"> Constant and trend </th>
+    #>    <th style="text-align:left;"> Decision </th>
+    #>   </tr>
+    #>  </thead>
+    #> <tbody>
+    #>   <tr>
+    #>    <td style="text-align:left;"> X </td>
+    #>    <td style="text-align:right;"> 2.209 </td>
+    #>    <td style="text-align:right;"> -1.130 </td>
+    #>    <td style="text-align:right;"> -2.397 </td>
+    #>    <td style="text-align:left;"> -1.654*** </td>
+    #>    <td style="text-align:left;"> -12.613*** </td>
+    #>    <td style="text-align:left;"> -12.669*** </td>
+    #>    <td style="text-align:left;"> I(1) </td>
+    #>   </tr>
+    #>   <tr>
+    #>    <td style="text-align:left;"> Y </td>
+    #>    <td style="text-align:right;"> 2.987 </td>
+    #>    <td style="text-align:right;"> -0.466 </td>
+    #>    <td style="text-align:right;"> -2.068 </td>
+    #>    <td style="text-align:left;"> -0.642*** </td>
+    #>    <td style="text-align:left;"> -9.858*** </td>
+    #>    <td style="text-align:left;"> -9.808*** </td>
+    #>    <td style="text-align:left;"> I(1) </td>
+    #>   </tr>
+    #> </tbody>
+    #> </table>
