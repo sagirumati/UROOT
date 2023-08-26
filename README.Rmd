@@ -1,7 +1,7 @@
 ---
 title: "UROOT: Conduct unit root tests using EViews routines"
 date: '`r format(Sys.Date(), "%A: %B %d,  %Y")`'
-output: bookdown::pdf_document2  #bookdown::markdown_document2
+output: bookdown::word_document2  #bookdown::markdown_document2
 ---
 
 
@@ -156,7 +156,7 @@ x=rnorm(100)
 y=cumsum(x)
 
 dataFrame=data.frame(x,y)
-uroot(dataFrame,format="latex",caption = "sagiru mati")
+uroot(dataFrame,caption = "sagiru mati")
 ```
 
 
