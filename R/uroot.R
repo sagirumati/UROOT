@@ -30,6 +30,7 @@ uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,format=kable
 
 
 wf=tempfile("URooTab",".",fileext = ".wf1")
+on.exit(unlink(wf,recursive = T,force = T))
 wf1= paste0("%wf=", shQuote_cmd(wf))
 
 fileName=tempfile("URooTab",".",fileext = ".prg")

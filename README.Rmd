@@ -139,9 +139,10 @@ library(URooTab)
 
 x=rnorm(100)
 y=cumsum(x)
+z=cumsum(y)
 
-dataFrame=data.frame(x,y)
-uroot(dataFrame,format = "markdown", caption = "All test")
+dataFrame=data.frame(x,y,z)
+uroot(dataFrame,format = "markdown", caption = "Unit Root Tests for x, y and Z")
 ```
 
 
@@ -151,7 +152,7 @@ uroot(dataFrame,format = "markdown", caption = "All test")
 #| eval: true
 #| echo: false
     
-adf(dataFrame,format = "markdown",caption = "ADF test")
+adf(dataFrame,format = "markdown",caption = "ADF Unit Root Tests for x, y and Z")
 ```
 
 
@@ -160,5 +161,5 @@ adf(dataFrame,format = "markdown",caption = "ADF test")
 #| eval: true
 #| echo: false
     
-pp(dataFrame,format = "markdown",caption = "PP test")
+pp(dataFrame,format = "markdown",caption = "PP Unit Root Tests for x, y and Z")
 ```
