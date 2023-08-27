@@ -5,7 +5,7 @@
 
 #' @return An EViews workfile
 #'
-#' @examples library(UROOT)
+#' @examples library(URooTab)
 #' \dontrun{
 #' Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
 #' adf(series=Data,test="ADF",info="sic")

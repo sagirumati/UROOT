@@ -24,7 +24,7 @@ An EViews workfile
 Use this function to conduct unit root test using `EViews` routines
 }
 \examples{
-library(UROOT)
+library(URooTab)
 \dontrun{
 Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
 adf(series=Data,test="ADF",info="sic")

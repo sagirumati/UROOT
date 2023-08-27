@@ -21,10 +21,10 @@ pp(series, info = "sic", caption = NULL, format = kable_format(), ...)
 An EViews workfile
 }
 \description{
-Use this function to conduct `PP` unit root test using `EViews` routines
+Use this function to conduct `PP` unit root test using `EViews` routines and report it in a table.
 }
 \examples{
-library(UROOT)
+library(URooTab)
 \dontrun{
 Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
 pp(series=Data,test="ADF",info="sic")

@@ -10,13 +10,14 @@
 
 #' @return An EViews workfile
 #'
-#' @examples library(UROOT)
+#' @examples library(URooTab)
 #' \dontrun{
 #' Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
 #' uroot(series=Data,test="ADF",info="sic")
 #'
 #'}
 #' @keywords documentation
+#' @export
 
 uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,format=kable_format(),...) {
   if(is.data.frame(series)) dataFrame=series else dataFrame=as.data.frame(series)
@@ -28,10 +29,10 @@ uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,format=kable
    test=paste(test,collapse = " ")
 
 
-wf=tempfile("uroot",".",fileext = ".wf1")
+wf=tempfile("URooTab",".",fileext = ".wf1")
 wf1= paste0("%wf=", shQuote_cmd(wf))
 
-fileName=tempfile("uroot",".",fileext = ".prg")
+fileName=tempfile("URooTab",".",fileext = ".prg")
 series= paste0("%series=", shQuote_cmd(series))
 test= paste0("%test=", shQuote_cmd(test))
 info= paste0("%info=", shQuote_cmd(info))
@@ -348,7 +349,7 @@ unlink_eviews()
 wf=paste0(getwd(),"\\",wf) %>% shQuote_cmd
 
 if(length(table)>1){
-for (i in table) import_kable(wf,table=i,caption = caption, format=format,...) %>% cat
+for (i in table) import_kable(wf,table=i,caption = caption, format=format,...) %>% print
 } else import_kable(wf,table=table,caption = caption, format=format,...)
 
 }

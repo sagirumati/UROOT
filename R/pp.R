@@ -1,11 +1,11 @@
 #' Conduct unit root test using `EViews` routines
 #'
-#' Use this function to conduct `PP` unit root test using `EViews` routines
+#' Use this function to conduct `PP` unit root test using `EViews` routines and report it in a table.
 #' @inheritParams uroot
 
 #' @return An EViews workfile
 #'
-#' @examples library(UROOT)
+#' @examples library(URooTab)
 #' \dontrun{
 #' Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
 #' pp(series=Data,test="ADF",info="sic")
