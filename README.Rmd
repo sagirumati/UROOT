@@ -156,7 +156,7 @@ x=rnorm(100)
 y=cumsum(x)
 
 dataFrame=data.frame(x,y)
-uroot(dataFrame,format = "html", caption = "All test")
+uroot(dataFrame,format = "markdown", caption = "All test")
 ```
 
 
@@ -166,7 +166,7 @@ uroot(dataFrame,format = "html", caption = "All test")
 #| eval: true
 #| echo: false
     
-adf(dataFrame,format = "html",caption = "ADF test")
+adf(dataFrame,format = "markdown",caption = "ADF test")
 ```
 
 
@@ -175,5 +175,5 @@ adf(dataFrame,format = "html",caption = "ADF test")
 #| eval: true
 #| echo: false
     
-pp(dataFrame,format = "html",caption = "PP test")
+pp(dataFrame,format = "markdown",caption = "PP test")
 ```

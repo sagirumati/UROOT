@@ -124,351 +124,202 @@ After loading the package, a chunk for Eviews can be created by
 supplying `eviews` as the engine name in R Markdown or Quarto document
 as shown below :
 
-<table>
-<caption>
-<span id="tab:URooTab"></span>Table 7.1: All test
-</caption>
+<table style="width:100%;">
+<caption><span id="tab:URooTab"></span>Table 7.1: All test</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variables
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-Decision
-</th>
+<tr class="header">
+<th style="text-align: left;">Variables</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">Decision</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-X
-</td>
-<td style="text-align:left;">
--8.615\*\*\*
-</td>
-<td style="text-align:left;">
--9.143\*\*\*
-</td>
-<td style="text-align:left;">
--9.174\*\*\*
-</td>
-<td style="text-align:left;">
--9.445\*\*\*
-</td>
-<td style="text-align:left;">
--9.393\*\*\*
-</td>
-<td style="text-align:left;">
--9.346\*\*\*
-</td>
-<td style="text-align:left;">
-I(0)
-</td>
+<tr class="odd">
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">-9.963***</td>
+<td style="text-align: left;">-10.205***</td>
+<td style="text-align: left;">-10.226***</td>
+<td style="text-align: left;">-11.451***</td>
+<td style="text-align: left;">-11.386***</td>
+<td style="text-align: left;">-11.339***</td>
+<td style="text-align: left;">I(0)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-1.617
-</td>
-<td style="text-align:left;">
--1.610
-</td>
-<td style="text-align:left;">
--2.083
-</td>
-<td style="text-align:left;">
--8.533\*\*\*
-</td>
-<td style="text-align:left;">
--9.075\*\*\*
-</td>
-<td style="text-align:left;">
--9.122\*\*\*
-</td>
-<td style="text-align:left;">
-I(1)
-</td>
+<tr class="even">
+<td style="text-align: left;">Y</td>
+<td style="text-align: left;">1.161</td>
+<td style="text-align: left;">-0.154</td>
+<td style="text-align: left;">-1.322</td>
+<td style="text-align: left;">-9.831***</td>
+<td style="text-align: left;">-10.087***</td>
+<td style="text-align: left;">-10.091***</td>
+<td style="text-align: left;">I(1)</td>
 </tr>
 </tbody>
 </table>
-<table>
-<caption>
+
 <span id="tab:URooTab"></span>Table 7.1: All test
-</caption>
+
+<table style="width:100%;">
+<caption><span id="tab:URooTab"></span>Table 7.1: All test</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variables
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-Decision
-</th>
+<tr class="header">
+<th style="text-align: left;">Variables</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">Decision</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-X
-</td>
-<td style="text-align:left;">
--8.614\*\*\*
-</td>
-<td style="text-align:left;">
--9.182\*\*\*
-</td>
-<td style="text-align:left;">
--9.299\*\*\*
-</td>
-<td style="text-align:left;">
--67.190\*\*\*
-</td>
-<td style="text-align:left;">
--74.363\*\*\*
-</td>
-<td style="text-align:left;">
--73.932\*\*\*
-</td>
-<td style="text-align:left;">
-I(0)
-</td>
+<tr class="odd">
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">-9.964***</td>
+<td style="text-align: left;">-10.208***</td>
+<td style="text-align: left;">-10.225***</td>
+<td style="text-align: left;">-49.670***</td>
+<td style="text-align: left;">-49.345***</td>
+<td style="text-align: left;">-52.120***</td>
+<td style="text-align: left;">I(0)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-1.609
-</td>
-<td style="text-align:left;">
--1.696
-</td>
-<td style="text-align:left;">
--2.045
-</td>
-<td style="text-align:left;">
--8.534\*\*\*
-</td>
-<td style="text-align:left;">
--9.077\*\*\*
-</td>
-<td style="text-align:left;">
--9.174\*\*\*
-</td>
-<td style="text-align:left;">
-I(1)
-</td>
+<tr class="even">
+<td style="text-align: left;">Y</td>
+<td style="text-align: left;">1.193</td>
+<td style="text-align: left;">-0.108</td>
+<td style="text-align: left;">-1.293</td>
+<td style="text-align: left;">-9.836***</td>
+<td style="text-align: left;">-10.089***</td>
+<td style="text-align: left;">-10.094***</td>
+<td style="text-align: left;">I(1)</td>
 </tr>
 </tbody>
 </table>
-<table>
-<caption>
+
+<span id="tab:URooTab"></span>Table 7.1: All test
+
+<table style="width:100%;">
+<caption><span id="tab:adf"></span>Table 7.2: ADF test</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variables</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">-9.963***</td>
+<td style="text-align: left;">-10.205***</td>
+<td style="text-align: left;">-10.226***</td>
+<td style="text-align: left;">-11.451***</td>
+<td style="text-align: left;">-11.386***</td>
+<td style="text-align: left;">-11.339***</td>
+<td style="text-align: left;">I(0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Y</td>
+<td style="text-align: left;">1.161</td>
+<td style="text-align: left;">-0.154</td>
+<td style="text-align: left;">-1.322</td>
+<td style="text-align: left;">-9.831***</td>
+<td style="text-align: left;">-10.087***</td>
+<td style="text-align: left;">-10.091***</td>
+<td style="text-align: left;">I(1)</td>
+</tr>
+</tbody>
+</table>
+
 <span id="tab:adf"></span>Table 7.2: ADF test
-</caption>
+
+<table style="width:100%;">
+<caption><span id="tab:pp"></span>Table 7.3: PP test</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variables
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-Decision
-</th>
+<tr class="header">
+<th style="text-align: left;">Variables</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">Decision</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-X
-</td>
-<td style="text-align:left;">
--8.615\*\*\*
-</td>
-<td style="text-align:left;">
--9.143\*\*\*
-</td>
-<td style="text-align:left;">
--9.174\*\*\*
-</td>
-<td style="text-align:left;">
--9.445\*\*\*
-</td>
-<td style="text-align:left;">
--9.393\*\*\*
-</td>
-<td style="text-align:left;">
--9.346\*\*\*
-</td>
-<td style="text-align:left;">
-I(0)
-</td>
+<tr class="odd">
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">-9.964***</td>
+<td style="text-align: left;">-10.208***</td>
+<td style="text-align: left;">-10.225***</td>
+<td style="text-align: left;">-49.670***</td>
+<td style="text-align: left;">-49.345***</td>
+<td style="text-align: left;">-52.120***</td>
+<td style="text-align: left;">I(0)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-1.617
-</td>
-<td style="text-align:left;">
--1.610
-</td>
-<td style="text-align:left;">
--2.083
-</td>
-<td style="text-align:left;">
--8.533\*\*\*
-</td>
-<td style="text-align:left;">
--9.075\*\*\*
-</td>
-<td style="text-align:left;">
--9.122\*\*\*
-</td>
-<td style="text-align:left;">
-I(1)
-</td>
+<tr class="even">
+<td style="text-align: left;">Y</td>
+<td style="text-align: left;">1.193</td>
+<td style="text-align: left;">-0.108</td>
+<td style="text-align: left;">-1.293</td>
+<td style="text-align: left;">-9.836***</td>
+<td style="text-align: left;">-10.089***</td>
+<td style="text-align: left;">-10.094***</td>
+<td style="text-align: left;">I(1)</td>
 </tr>
 </tbody>
 </table>
-<table>
-<caption>
+
 <span id="tab:pp"></span>Table 7.3: PP test
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Variables
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-Decision
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-X
-</td>
-<td style="text-align:left;">
--8.614\*\*\*
-</td>
-<td style="text-align:left;">
--9.182\*\*\*
-</td>
-<td style="text-align:left;">
--9.299\*\*\*
-</td>
-<td style="text-align:left;">
--67.190\*\*\*
-</td>
-<td style="text-align:left;">
--74.363\*\*\*
-</td>
-<td style="text-align:left;">
--73.932\*\*\*
-</td>
-<td style="text-align:left;">
-I(0)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-1.609
-</td>
-<td style="text-align:left;">
--1.696
-</td>
-<td style="text-align:left;">
--2.045
-</td>
-<td style="text-align:left;">
--8.534\*\*\*
-</td>
-<td style="text-align:left;">
--9.077\*\*\*
-</td>
-<td style="text-align:left;">
--9.174\*\*\*
-</td>
-<td style="text-align:left;">
-I(1)
-</td>
-</tr>
-</tbody>
-</table>
