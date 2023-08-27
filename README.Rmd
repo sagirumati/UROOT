@@ -1,7 +1,7 @@
 ---
 title: "URooTab: Reporting EViews Unit Root Tests in Table"
 date: '`r format(Sys.Date(), "%A: %B %d,  %Y")`'
-output: bookdown::word_document2  #bookdown::markdown_document2
+output: bookdown::markdown_document2  #bookdown::word_document2
 ---
 
 
@@ -156,7 +156,7 @@ x=rnorm(100)
 y=cumsum(x)
 
 dataFrame=data.frame(x,y)
-uroot(dataFrame,format = "pandoc")
+uroot(dataFrame,format = "html", caption = "All test")
 ```
 
 
@@ -166,7 +166,7 @@ uroot(dataFrame,format = "pandoc")
 #| eval: true
 #| echo: false
     
-adf(dataFrame,caption = "ADF test")
+adf(dataFrame,format = "html",caption = "ADF test")
 ```
 
 
@@ -175,5 +175,5 @@ adf(dataFrame,caption = "ADF test")
 #| eval: true
 #| echo: false
     
-pp(dataFrame,caption = "PP test")
+pp(dataFrame,format = "html",caption = "PP test")
 ```
