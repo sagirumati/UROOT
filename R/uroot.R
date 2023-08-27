@@ -6,6 +6,7 @@
 #' @param info Name of the information criterion. For example, `SIC`, `AIC`, `HQ`.
 #' @param caption Table caption as in `kable`.
 #' @param format Table format in `kable`.
+#' @param ... Other arguments supported by `EviewsR` `import_kable()` function.
 
 #' @return An EViews workfile
 #'
@@ -15,11 +16,9 @@
 #' uroot(series=Data,test="ADF",info="sic")
 #'
 #'}
-#' @family important functions
 #' @keywords documentation
-#' @export
 
-uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,format=kable_format()) {
+uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,format=kable_format(),...) {
   if(is.data.frame(series)) dataFrame=series else dataFrame=as.data.frame(series)
 
 
@@ -160,20 +159,125 @@ table {%test_type}_table
 {%test_type}_table(1,8)=\"Constant and trend\"
 {%test_type}_table(1,9)=\"Decision\"
 
+'#####################################
+
+'##### CONDITIONAL ASTERISK
+
+%asterisk1=\"\"
+%asterisk2=\"\"
+%asterisk3=\"\"
+%asterisk4=\"\"
+%asterisk5=\"\"
+%asterisk6=\"\"
+
+'### asterisk1
+
+if  {%test_type}_{%x{!j}}_none(7,5)<0.1 then
+%asterisk1=\"*\"
+endif
+
+if {%test_type}_{%x{!j}}_none(7,5)<0.05 then
+%asterisk1=\"**\"
+endif
+
+if {%test_type}_{%x{!j}}_none(7,5)<0.01 then
+%asterisk1=\"***\"
+endif
+
+
+
+'# ASTERISK2
+
+
+if {%test_type}_{%x{!j}}_const(7,5)<0.1 then
+%asterisk2=\"*\"
+endif
+
+if {%test_type}_{%x{!j}}_const(7,5)<0.05 then
+%asterisk2=\"**\"
+endif
+
+if {%test_type}_{%x{!j}}_const(7,5)<0.01 then
+%asterisk2=\"***\"
+endif
+
+'# ASTERISK3
+
+if {%test_type}_{%x{!j}}_trend(7,5)<0.1 then
+%asterisk3=\"*\"
+endif
+
+if {%test_type}_{%x{!j}}_trend(7,5)<0.05 then
+%asterisk3=\"**\"
+endif
+
+if {%test_type}_{%x{!j}}_trend(7,5)<0.01 then
+%asterisk3=\"***\"
+endif
+
+'# ASTERISK4
+
+
+if {%test_type}_{%x{!j}}_none_d1(7,5)<0.1 then
+%asterisk4=\"*\"
+endif
+
+if {%test_type}_{%x{!j}}_none_d1(7,5)<0.05 then
+%asterisk4=\"**\"
+endif
+
+if {%test_type}_{%x{!j}}_none_d1(7,5)<0.01 then
+%asterisk4=\"***\"
+endif
+
+
+'# ASTERISK5
+
+
+if {%test_type}_{%x{!j}}_const_d1(7,5)<0.1 then
+%asterisk5=\"*\"
+endif
+
+if {%test_type}_{%x{!j}}_const_d1(7,5)<0.05 then
+%asterisk5=\"**\"
+endif
+
+if {%test_type}_{%x{!j}}_const_d1(7,5)<0.01 then
+%asterisk5=\"***\"
+endif
+
+'# ASTERISK6
+
+
+if {%test_type}_{%x{!j}}_trend_d1(7,5)<0.1 then
+%asterisk6=\"*\"
+endif
+
+if {%test_type}_{%x{!j}}_trend_d1(7,5)<0.05 then
+%asterisk6=\"**\"
+endif
+
+if {%test_type}_{%x{!j}}_trend_d1(7,5)<0.01 then
+%asterisk6=\"***\"
+endif
 
 
 '{%test_type}_table(2,1)=%country{!p}
 {%test_type}_table(!j+1,2)=%x{!j}
 {%test_type}_table(!j+1,2)=%x{!j}
-{%test_type}_table(!j+1,3)=@str({%test_type}_{%x{!j}}_none(7,4),\"f.3\")
-{%test_type}_table(!j+1,4)=@str({%test_type}_{%x{!j}}_const(7,4),\"f.3\")
-{%test_type}_table(!j+1,5)=@str({%test_type}_{%x{!j}}_trend(7,4),\"f.3\")
+{%test_type}_table(!j+1,3)=@str({%test_type}_{%x{!j}}_none(7,4),\"f.3\")+%asterisk1
+{%test_type}_table(!j+1,4)=@str({%test_type}_{%x{!j}}_const(7,4),\"f.3\")+%asterisk2
+{%test_type}_table(!j+1,5)=@str({%test_type}_{%x{!j}}_trend(7,4),\"f.3\")+%asterisk3
 
-{%test_type}_table(!j+1,6)=@str({%test_type}_{%x{!j}}_none_d1(7,4),\"f.3\")+\"***\"
-{%test_type}_table(!j+1,7)=@str({%test_type}_{%x{!j}}_const_d1(7,4),\"f.3\")+\"***\"
-{%test_type}_table(!j+1,8)=@str({%test_type}_{%x{!j}}_trend_d1(7,4),\"f.3\")+\"***\"
+
+{%test_type}_table(!j+1,6)=@str({%test_type}_{%x{!j}}_none_d1(7,4),\"f.3\")+%asterisk4
+{%test_type}_table(!j+1,7)=@str({%test_type}_{%x{!j}}_const_d1(7,4),\"f.3\")+%asterisk5
+{%test_type}_table(!j+1,8)=@str({%test_type}_{%x{!j}}_trend_d1(7,4),\"f.3\")+%asterisk6
 next
 next
+
+
+'#### DECISION COLUMN
 
 for !j=1 to  !vnum
 for %k {%x{!j}}_{%test_type}
@@ -185,17 +289,28 @@ if {%k}(!m,!n)<0.05 then
 {%k}(!m,!n+1)=\"I(0)\"
 else
 {%k}(!m,!n+1)=\"I(1)\"
+endif
+
 if {%p}(!m,!n)<0.05 then
 {%p}(!m,!n+1)=\"I(1)\"
 else
 {%p}(!m,!n+1)=\"I(2)\"
 endif
+
+if {%k}(!m,!n)<0.05 and {%p}(!m,!n)<0.05 then
+{%p}(!m,!n+1)=\"I(0)\"
 endif
+
 {%test_type}_table(!j+1,9)={%p}(8,6)
 next
 next
 next
 next
+
+
+'#########################3333
+
+
 for !j=1 to !vnum
 for %k {%x{!j}}_{%test_type} {%x{!j}}_{%test_type}_d1
 spool unitroot_results
@@ -233,8 +348,8 @@ unlink_eviews()
 wf=paste0(getwd(),"\\",wf) %>% shQuote_cmd
 
 if(length(table)>1){
-for (i in table) import_kable(wf,table=i,caption = caption, format=format) %>% cat
-} else import_kable(wf,table=table,caption = caption, format=format)
+for (i in table) import_kable(wf,table=i,caption = caption, format=format,...) %>% cat
+} else import_kable(wf,table=table,caption = caption, format=format,...)
 
 }
 

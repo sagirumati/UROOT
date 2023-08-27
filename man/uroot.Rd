@@ -9,7 +9,8 @@ uroot(
   test = c("adf", "pp"),
   info = "sic",
   caption = NULL,
-  format = kable_format()
+  format = kable_format(),
+  ...
 )
 }
 \arguments{
@@ -22,6 +23,8 @@ uroot(
 \item{caption}{Table caption as in `kable`.}
 
 \item{format}{Table format in `kable`.}
+
+\item{...}{Other arguments supported by `EviewsR` `import_kable()` function.}
 }
 \value{
 An EViews workfile
@@ -37,10 +40,4 @@ uroot(series=Data,test="ADF",info="sic")
 
 }
 }
-\seealso{
-Other important functions: 
-\code{\link{adf}()},
-\code{\link{pp}()}
-}
-\concept{important functions}
 \keyword{documentation}

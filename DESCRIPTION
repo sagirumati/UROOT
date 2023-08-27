@@ -1,6 +1,6 @@
-Package: UROOT
+Package: URooTab
 Type: Package
-Title: Conduct Unit Root Tests Using EViews Routines
+Title: Reporting EViews Unit Root Tests in Table
 Version: 0.1.0
 Imports: EviewsR, knitr, magrittr, xts, zoo
 Author: Sagiru Mati

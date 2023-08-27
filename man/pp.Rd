@@ -4,7 +4,7 @@
 \alias{pp}
 \title{Conduct unit root test using `EViews` routines}
 \usage{
-pp(series, info = "sic", caption = NULL, format = kable_format())
+pp(series, info = "sic", caption = NULL, format = kable_format(), ...)
 }
 \arguments{
 \item{series}{A vector of names or wildcard expressions for series object(s) contained in a dataframe.}
@@ -15,13 +15,13 @@ pp(series, info = "sic", caption = NULL, format = kable_format())
 
 \item{format}{Table format in `kable`.}
 
-\item{test}{Name of the unit root test. For example, `ADF`, `PP`.}
+\item{...}{Other arguments supported by `EviewsR` `import_kable()` function.}
 }
 \value{
 An EViews workfile
 }
 \description{
-Use this function to conduct unit root test using `EViews` routines
+Use this function to conduct `PP` unit root test using `EViews` routines
 }
 \examples{
 library(UROOT)
@@ -33,8 +33,7 @@ pp(series=Data,test="ADF",info="sic")
 }
 \seealso{
 Other important functions: 
-\code{\link{adf}()},
-\code{\link{uroot}()}
+\code{\link{adf}()}
 }
 \concept{important functions}
 \keyword{documentation}

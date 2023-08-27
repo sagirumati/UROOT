@@ -1,6 +1,9 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
+^.*\.Rmd$
+^.*\.pdf$
+^.*\.docx$
 ^sagiru$
 CODE_OF_CONDUCT.md
 LICENCE

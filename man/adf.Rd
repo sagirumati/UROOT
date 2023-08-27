@@ -2,9 +2,9 @@
 % Please edit documentation in R/adf.R
 \name{adf}
 \alias{adf}
-\title{Conduct unit root test using `EViews` routines}
+\title{Conduct `ADF` unit root test using `EViews` routines}
 \usage{
-adf(series, info = "sic", caption = NULL, format = kable_format())
+adf(series, info = "sic", caption = NULL, format = kable_format(), ...)
 }
 \arguments{
 \item{series}{A vector of names or wildcard expressions for series object(s) contained in a dataframe.}
@@ -15,7 +15,7 @@ adf(series, info = "sic", caption = NULL, format = kable_format())
 
 \item{format}{Table format in `kable`.}
 
-\item{test}{Name of the unit root test. For example, `ADF`, `PP`.}
+\item{...}{Other arguments supported by `EviewsR` `import_kable()` function.}
 }
 \value{
 An EViews workfile
@@ -33,8 +33,7 @@ adf(series=Data,test="ADF",info="sic")
 }
 \seealso{
 Other important functions: 
-\code{\link{pp}()},
-\code{\link{uroot}()}
+\code{\link{pp}()}
 }
 \concept{important functions}
 \keyword{documentation}

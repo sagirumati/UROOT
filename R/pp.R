@@ -1,11 +1,7 @@
 #' Conduct unit root test using `EViews` routines
 #'
-#' Use this function to conduct unit root test using `EViews` routines
-#' @param series A vector of names or wildcard expressions for series object(s) contained in a dataframe.
-#' @param  test Name of the unit root test. For example, `ADF`, `PP`.
-#' @param info Name of the information criterion. For example, `SIC`, `AIC`, `HQ`.
-#' @param caption Table caption as in `kable`.
-#' @param format Table format in `kable`.
+#' Use this function to conduct `PP` unit root test using `EViews` routines
+#' @inheritParams uroot
 
 #' @return An EViews workfile
 #'
@@ -19,8 +15,8 @@
 #' @keywords documentation
 #' @export
 
-pp <- function(series,info="sic",caption=NULL,format=kable_format()) {
+pp <- function(series,info="sic",caption=NULL,format=kable_format(),...) {
 
-uroot(series,test="pp",info=info,caption=caption,format=format)
+uroot(series,test="pp",info=info,caption=caption,format=format,...)
 }
 

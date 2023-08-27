@@ -2,7 +2,6 @@
 
 export(adf)
 export(pp)
-export(uroot)
 import(EviewsR)
 import(knitr)
 import(magrittr)
