@@ -44,12 +44,15 @@ Please do not forget to cite the package as follows:
 
 Mati S. (2023). URooTab: Tabular Reporting of 'EViews' Unit Root Tests. CRAN, https://github.com/sagirumati/URooTab
 
-  @Manual{2023,
+````
+  @Manual{Mati2023,
     title = {URooTab: Tabular Reporting of 'EViews' Unit Root Tests},
     author = {Sagiru Mati},
     publisher = {CRAN},
     url = {https://github.com/sagirumati/URooTab},
   }
+````  
+  
 # About the Author
 
 The author of this package, **Sagiru Mati**, obtained his PhD in

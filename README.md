@@ -16,9 +16,14 @@ Please do not forget to cite the package as follows:
 Mati S. (2023). URooTab: Tabular Reporting of ‘EViews’ Unit Root Tests.
 CRAN, <https://github.com/sagirumati/URooTab>
 
-@Manual{2023, title = {URooTab: Tabular Reporting of ‘EViews’ Unit Root
-Tests}, author = {Sagiru Mati}, publisher = {CRAN}, url =
-{<https://github.com/sagirumati/URooTab>}, } \# About the Author
+      @Manual{Mati2023,
+        title = {URooTab: Tabular Reporting of 'EViews' Unit Root Tests},
+        author = {Sagiru Mati},
+        publisher = {CRAN},
+        url = {https://github.com/sagirumati/URooTab},
+      }
+
+# 1 About the Author
 
 The author of this package, **Sagiru Mati**, obtained his PhD in
 Economics from the Near East University, North Cyprus. He works at the
@@ -38,12 +43,12 @@ Science**](https://www.webofscience.com/wos/author/record/P-3408-2017)
 
 [**ORCID: 0000-0003-1413-3974**](https://orcid.org/0000-0003-1413-3974)
 
-# 1 About URooTab
+# 2 About URooTab
 
 URooTab is an R package that can conducts `EViews` unit root tests and
 report them in tabular form.
 
-# 2 Why URooTab?
+# 3 Why URooTab?
 
 While there are R packages and EViews add-ins available for presenting
 unit root tests in tabular form, none of them incorporates **EViews**
@@ -65,7 +70,7 @@ procedures within the R environment. Specifically:
 -   I wish I could do all of the above from R, R Markdown or Quarto
     without opening the EViews!!!
 
-# 3 Installation
+# 4 Installation
 
 URooTab can be installed using the following commands in R.
 
@@ -73,7 +78,7 @@ URooTab can be installed using the following commands in R.
     OR
     devtools::install_github("sagirumati/URooTab")
 
-# 4 Setup
+# 5 Setup
 
 To run the package successfully, you need to do one of the following
 
@@ -95,7 +100,7 @@ To run the package successfully, you need to do one of the following
     library(EviewR)
     set_eviews_path("C:/Program Files (x86)/EViews 10/EViews10.exe")
 
-# 5 Usage
+# 6 Usage
 
 Please load the URooTab package as follows:
 
@@ -103,16 +108,16 @@ Please load the URooTab package as follows:
     library(URooTab)
     ```
 
-# 6 Ways to use URooTab
+# 7 Ways to use URooTab
 
 The package can work with base R, R Markdown or Quarto document.
 
-## 6.1 URooTab along with R Markdown or Quarto document
+## 7.1 URooTab along with R Markdown or Quarto document
 
 You can use `URooTab` in an R chunk in R Markdown or Quarto document
 
 <table style="width:100%;">
-<caption><span id="tab:URooTab"></span>Table 6.1: Unit Root Tests for x,
+<caption><span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x,
 y and Z</caption>
 <colgroup>
 <col style="width: 9%" />
@@ -139,41 +144,41 @@ y and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-10.000***</td>
-<td style="text-align: left;">-10.093***</td>
-<td style="text-align: left;">-10.037***</td>
-<td style="text-align: left;">-7.832***</td>
-<td style="text-align: left;">-7.790***</td>
-<td style="text-align: left;">-7.742***</td>
+<td style="text-align: left;">-11.529***</td>
+<td style="text-align: left;">-11.471***</td>
+<td style="text-align: left;">-12.174***</td>
+<td style="text-align: left;">-13.855***</td>
+<td style="text-align: left;">-13.786***</td>
+<td style="text-align: left;">-13.735***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">0.263</td>
-<td style="text-align: left;">-0.824</td>
-<td style="text-align: left;">-1.732</td>
-<td style="text-align: left;">-10.092***</td>
-<td style="text-align: left;">-10.156***</td>
-<td style="text-align: left;">-10.097***</td>
+<td style="text-align: left;">-0.481</td>
+<td style="text-align: left;">-1.411</td>
+<td style="text-align: left;">-1.422</td>
+<td style="text-align: left;">-11.464***</td>
+<td style="text-align: left;">-11.406***</td>
+<td style="text-align: left;">-12.065***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">-0.482</td>
-<td style="text-align: left;">-0.463</td>
-<td style="text-align: left;">-1.750</td>
-<td style="text-align: left;">0.259</td>
-<td style="text-align: left;">-0.700</td>
-<td style="text-align: left;">-1.905</td>
+<td style="text-align: left;">-1.365</td>
+<td style="text-align: left;">-2.444</td>
+<td style="text-align: left;">-2.181</td>
+<td style="text-align: left;">-0.488</td>
+<td style="text-align: left;">-1.338</td>
+<td style="text-align: left;">-1.418</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
 </table>
 
-<span id="tab:URooTab"></span>Table 6.1: Unit Root Tests for x, y and Z
+<span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x, y and Z
 
 <table style="width:100%;">
-<caption><span id="tab:URooTab"></span>Table 6.1: Unit Root Tests for x,
+<caption><span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x,
 y and Z</caption>
 <colgroup>
 <col style="width: 9%" />
@@ -200,41 +205,41 @@ y and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-10.000***</td>
-<td style="text-align: left;">-10.094***</td>
-<td style="text-align: left;">-10.037***</td>
-<td style="text-align: left;">-69.058***</td>
-<td style="text-align: left;">-70.497***</td>
-<td style="text-align: left;">-78.858***</td>
+<td style="text-align: left;">-11.439***</td>
+<td style="text-align: left;">-11.384***</td>
+<td style="text-align: left;">-12.190***</td>
+<td style="text-align: left;">-51.975***</td>
+<td style="text-align: left;">-51.970***</td>
+<td style="text-align: left;">-52.122***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">0.300</td>
-<td style="text-align: left;">-0.801</td>
-<td style="text-align: left;">-1.761</td>
-<td style="text-align: left;">-10.091***</td>
-<td style="text-align: left;">-10.154***</td>
-<td style="text-align: left;">-10.096***</td>
+<td style="text-align: left;">-0.451</td>
+<td style="text-align: left;">-1.389</td>
+<td style="text-align: left;">-1.304</td>
+<td style="text-align: left;">-11.382***</td>
+<td style="text-align: left;">-11.326***</td>
+<td style="text-align: left;">-12.079***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">8.740</td>
-<td style="text-align: left;">6.001</td>
-<td style="text-align: left;">1.012</td>
-<td style="text-align: left;">0.285</td>
-<td style="text-align: left;">-0.681</td>
-<td style="text-align: left;">-1.915</td>
+<td style="text-align: left;">3.780</td>
+<td style="text-align: left;">-0.324</td>
+<td style="text-align: left;">-1.220</td>
+<td style="text-align: left;">-0.455</td>
+<td style="text-align: left;">-1.308</td>
+<td style="text-align: left;">-1.296</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
 </table>
 
-<span id="tab:URooTab"></span>Table 6.1: Unit Root Tests for x, y and Z
+<span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x, y and Z
 
 <table style="width:100%;">
-<caption><span id="tab:adf"></span>Table 6.2: ADF Unit Root Tests for x,
+<caption><span id="tab:adf"></span>Table 7.2: ADF Unit Root Tests for x,
 y and Z</caption>
 <colgroup>
 <col style="width: 9%" />
@@ -261,41 +266,41 @@ y and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-10.000***</td>
-<td style="text-align: left;">-10.093***</td>
-<td style="text-align: left;">-10.037***</td>
-<td style="text-align: left;">-7.832***</td>
-<td style="text-align: left;">-7.790***</td>
-<td style="text-align: left;">-7.742***</td>
+<td style="text-align: left;">-11.529***</td>
+<td style="text-align: left;">-11.471***</td>
+<td style="text-align: left;">-12.174***</td>
+<td style="text-align: left;">-13.855***</td>
+<td style="text-align: left;">-13.786***</td>
+<td style="text-align: left;">-13.735***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">0.263</td>
-<td style="text-align: left;">-0.824</td>
-<td style="text-align: left;">-1.732</td>
-<td style="text-align: left;">-10.092***</td>
-<td style="text-align: left;">-10.156***</td>
-<td style="text-align: left;">-10.097***</td>
+<td style="text-align: left;">-0.481</td>
+<td style="text-align: left;">-1.411</td>
+<td style="text-align: left;">-1.422</td>
+<td style="text-align: left;">-11.464***</td>
+<td style="text-align: left;">-11.406***</td>
+<td style="text-align: left;">-12.065***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">-0.482</td>
-<td style="text-align: left;">-0.463</td>
-<td style="text-align: left;">-1.750</td>
-<td style="text-align: left;">0.259</td>
-<td style="text-align: left;">-0.700</td>
-<td style="text-align: left;">-1.905</td>
+<td style="text-align: left;">-1.365</td>
+<td style="text-align: left;">-2.444</td>
+<td style="text-align: left;">-2.181</td>
+<td style="text-align: left;">-0.488</td>
+<td style="text-align: left;">-1.338</td>
+<td style="text-align: left;">-1.418</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
 </table>
 
-<span id="tab:adf"></span>Table 6.2: ADF Unit Root Tests for x, y and Z
+<span id="tab:adf"></span>Table 7.2: ADF Unit Root Tests for x, y and Z
 
 <table style="width:100%;">
-<caption><span id="tab:pp"></span>Table 6.3: PP Unit Root Tests for x, y
+<caption><span id="tab:pp"></span>Table 7.3: PP Unit Root Tests for x, y
 and Z</caption>
 <colgroup>
 <col style="width: 9%" />
@@ -322,35 +327,35 @@ and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-10.000***</td>
-<td style="text-align: left;">-10.094***</td>
-<td style="text-align: left;">-10.037***</td>
-<td style="text-align: left;">-69.058***</td>
-<td style="text-align: left;">-70.497***</td>
-<td style="text-align: left;">-78.858***</td>
+<td style="text-align: left;">-11.439***</td>
+<td style="text-align: left;">-11.384***</td>
+<td style="text-align: left;">-12.190***</td>
+<td style="text-align: left;">-51.975***</td>
+<td style="text-align: left;">-51.970***</td>
+<td style="text-align: left;">-52.122***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">0.300</td>
-<td style="text-align: left;">-0.801</td>
-<td style="text-align: left;">-1.761</td>
-<td style="text-align: left;">-10.091***</td>
-<td style="text-align: left;">-10.154***</td>
-<td style="text-align: left;">-10.096***</td>
+<td style="text-align: left;">-0.451</td>
+<td style="text-align: left;">-1.389</td>
+<td style="text-align: left;">-1.304</td>
+<td style="text-align: left;">-11.382***</td>
+<td style="text-align: left;">-11.326***</td>
+<td style="text-align: left;">-12.079***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">8.740</td>
-<td style="text-align: left;">6.001</td>
-<td style="text-align: left;">1.012</td>
-<td style="text-align: left;">0.285</td>
-<td style="text-align: left;">-0.681</td>
-<td style="text-align: left;">-1.915</td>
+<td style="text-align: left;">3.780</td>
+<td style="text-align: left;">-0.324</td>
+<td style="text-align: left;">-1.220</td>
+<td style="text-align: left;">-0.455</td>
+<td style="text-align: left;">-1.308</td>
+<td style="text-align: left;">-1.296</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
 </table>
 
-<span id="tab:pp"></span>Table 6.3: PP Unit Root Tests for x, y and Z
+<span id="tab:pp"></span>Table 7.3: PP Unit Root Tests for x, y and Z
