@@ -121,7 +121,8 @@ You can use `URooTab` in an R chunk in R Markdown or Quarto document:
 
 The `uroot()` function reports all the available test (ADF and PP) at
 once. It is more suitable for Quarto document, which has both `tbl-cap`
-and `tbl-subcap` chunk options. To produce Table @ref{tab:URooTab}
+and `tbl-subcap` chunk options. To produce Table
+<a href="#tab:URooTab">7.1</a>
 
     ```{r}
     #| label: URooTab
@@ -137,14 +138,6 @@ and `tbl-subcap` chunk options. To produce Table @ref{tab:URooTab}
     dataFrame=data.frame(x,y,z)
     uroot(dataFrame, caption = "Unit Root Tests for x, y and Z")
     ```
-
-    library(URooTab)
-    set.seed(1234)  # for reproducibility
-    x = rnorm(100)
-    y = cumsum(x)
-    z = cumsum(y)
-    dataFrame = data.frame(x, y, z)
-    uroot(dataFrame, format = "markdown", caption = "Unit Root Tests for x, y and Z")
 
 <table style="width:100%;">
 <caption><span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x,
