@@ -129,89 +129,28 @@ You can use `URooTab` in an R chunk in R Markdown or Quarto document
     #> 
     #> Table: (\#tab:URooTab)Unit Root Tests for x, y and Z
     #> 
-    #> |Variables |None       |Constant   |Constant and trend |None       |Constant   |Constant and trend |Decision |
-    #> |:---------|:----------|:----------|:------------------|:----------|:----------|:------------------|:--------|
-    #> |X         |-10.617*** |-10.996*** |-11.110***         |-8.070***  |-8.024***  |-7.985***          |I(0)     |
-    #> |Y         |0.807      |-1.878     |-2.490             |-10.384*** |-10.766*** |-7.594***          |I(1)     |
-    #> |Z         |-0.398     |0.924      |-3.262*            |0.807      |-1.905     |-2.539             |I(2)     |
+    #> |Variables |None      |Constant  |Constant and trend |None      |Constant  |Constant and trend |Decision |
+    #> |:---------|:---------|:---------|:------------------|:---------|:---------|:------------------|:--------|
+    #> |X         |-8.413*** |-8.440*** |-8.398***          |-8.858*** |-8.816*** |-8.777***          |I(0)     |
+    #> |Y         |-0.067    |-0.898    |-1.690             |-8.379*** |-8.412*** |-8.373***          |I(1)     |
+    #> |Z         |-1.279    |-1.140    |-2.391             |-0.068    |-0.939    |-1.624             |I(2)     |
     #> 
     #> 
     #> Table: (\#tab:URooTab)Unit Root Tests for x, y and Z
     #> 
-    #> |Variables |None       |Constant   |Constant and trend |None       |Constant   |Constant and trend |Decision |
-    #> |:---------|:----------|:----------|:------------------|:----------|:----------|:------------------|:--------|
-    #> |X         |-10.617*** |-11.520*** |-13.856***         |-51.401*** |-50.714*** |-50.620***         |I(0)     |
-    #> |Y         |0.960      |-2.485     |-2.331             |-10.385*** |-11.119*** |-12.983***         |I(1)     |
-    #> |Z         |9.629      |7.418      |-6.118***          |0.965      |-2.513     |-2.380             |I(2)     |
+    #> |Variables |None      |Constant  |Constant and trend |None       |Constant   |Constant and trend |Decision |
+    #> |:---------|:---------|:---------|:------------------|:----------|:----------|:------------------|:--------|
+    #> |X         |-8.365*** |-8.372*** |-8.329***          |-42.073*** |-41.801*** |-44.576***         |I(0)     |
+    #> |Y         |-0.166    |-0.956    |-1.926             |-8.333***  |-8.345***  |-8.305***          |I(1)     |
+    #> |Z         |5.140     |4.164     |-0.428             |-0.168     |-0.995     |-1.870             |I(2)     |
 
-    adf(dataFrame, format = "markdown", caption = "ADF Unit Root Tests for x, y and Z")
-
-<table style="width:100%;">
-<caption><span id="tab:adf"></span>Table 7.1: ADF Unit Root Tests for x,
-y and Z</caption>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 8%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Variables</th>
-<th style="text-align: left;">None</th>
-<th style="text-align: left;">Constant</th>
-<th style="text-align: left;">Constant and trend</th>
-<th style="text-align: left;">None</th>
-<th style="text-align: left;">Constant</th>
-<th style="text-align: left;">Constant and trend</th>
-<th style="text-align: left;">Decision</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">X</td>
-<td style="text-align: left;">-10.617***</td>
-<td style="text-align: left;">-10.996***</td>
-<td style="text-align: left;">-11.110***</td>
-<td style="text-align: left;">-8.070***</td>
-<td style="text-align: left;">-8.024***</td>
-<td style="text-align: left;">-7.985***</td>
-<td style="text-align: left;">I(0)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Y</td>
-<td style="text-align: left;">0.807</td>
-<td style="text-align: left;">-1.878</td>
-<td style="text-align: left;">-2.490</td>
-<td style="text-align: left;">-10.384***</td>
-<td style="text-align: left;">-10.766***</td>
-<td style="text-align: left;">-7.594***</td>
-<td style="text-align: left;">I(1)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Z</td>
-<td style="text-align: left;">-0.398</td>
-<td style="text-align: left;">0.924</td>
-<td style="text-align: left;">-3.262*</td>
-<td style="text-align: left;">0.807</td>
-<td style="text-align: left;">-1.905</td>
-<td style="text-align: left;">-2.539</td>
-<td style="text-align: left;">I(2)</td>
-</tr>
-</tbody>
-</table>
-
-<span id="tab:adf"></span>Table 7.1: ADF Unit Root Tests for x, y and Z
+    adf(dataFrame, format = "latex", caption = "ADF Unit Root Tests for x, y and Z")
 
     pp(dataFrame, format = "html", caption = "PP Unit Root Tests for x, y and Z")
 
 <table>
 <caption>
-<span id="tab:pp"></span>Table 7.2: PP Unit Root Tests for x, y and Z
+<span id="tab:pp"></span>Table 7.1: PP Unit Root Tests for x, y and Z
 </caption>
 <thead>
 <tr>
@@ -247,22 +186,22 @@ Decision
 X
 </td>
 <td style="text-align:left;">
--10.617\*\*\*
+-8.365\*\*\*
 </td>
 <td style="text-align:left;">
--11.520\*\*\*
+-8.372\*\*\*
 </td>
 <td style="text-align:left;">
--13.856\*\*\*
+-8.329\*\*\*
 </td>
 <td style="text-align:left;">
--51.401\*\*\*
+-42.073\*\*\*
 </td>
 <td style="text-align:left;">
--50.714\*\*\*
+-41.801\*\*\*
 </td>
 <td style="text-align:left;">
--50.620\*\*\*
+-44.576\*\*\*
 </td>
 <td style="text-align:left;">
 I(0)
@@ -273,22 +212,22 @@ I(0)
 Y
 </td>
 <td style="text-align:left;">
-0.960
+-0.166
 </td>
 <td style="text-align:left;">
--2.485
+-0.956
 </td>
 <td style="text-align:left;">
--2.331
+-1.926
 </td>
 <td style="text-align:left;">
--10.385\*\*\*
+-8.333\*\*\*
 </td>
 <td style="text-align:left;">
--11.119\*\*\*
+-8.345\*\*\*
 </td>
 <td style="text-align:left;">
--12.983\*\*\*
+-8.305\*\*\*
 </td>
 <td style="text-align:left;">
 I(1)
@@ -299,22 +238,22 @@ I(1)
 Z
 </td>
 <td style="text-align:left;">
-9.629
+5.140
 </td>
 <td style="text-align:left;">
-7.418
+4.164
 </td>
 <td style="text-align:left;">
--6.118\*\*\*
+-0.428
 </td>
 <td style="text-align:left;">
-0.965
+-0.168
 </td>
 <td style="text-align:left;">
--2.513
+-0.995
 </td>
 <td style="text-align:left;">
--2.380
+-1.870
 </td>
 <td style="text-align:left;">
 I(2)

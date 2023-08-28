@@ -169,15 +169,17 @@ uroot(dataFrame,format = "markdown", caption = "Unit Root Tests for x, y and Z")
 ```{r}
 #| label: adf
 #| eval: true
+#| results: asis
 
     
-adf(dataFrame,format = "markdown",caption = "ADF Unit Root Tests for x, y and Z")
+adf(dataFrame,format = "latex",caption = "ADF Unit Root Tests for x, y and Z")
 ```
 
 
 ```{r}
 #| label: pp
 #| eval: true
+#| results: asis
     
 pp(dataFrame,format = "html",caption = "PP Unit Root Tests for x, y and Z")
 ```
