@@ -26,9 +26,12 @@ Use this function to conduct `PP` unit root test using `EViews` routines and rep
 \examples{
 library(URooTab)
 \dontrun{
-Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
-pp(series=Data,test="ADF",info="sic")
-
+set.seed(1234)
+x=rnorm(100)
+y=cumsum(x)
+z=cumsum(y)
+dataFrame=data.frame(x,y,z)
+pp(series=dataFrame,format="html",info="hq")
 }
 }
 \seealso{

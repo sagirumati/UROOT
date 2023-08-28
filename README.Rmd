@@ -145,19 +145,6 @@ Please load the URooTab package as follows:
 The package can work with base R, R Markdown or Quarto document.
 
 
-We can create a dataframe as follows:
-
-```{r}
-library(URooTab)
-set.seed(1234) # for reproducibility
-x=rnorm(100) 
-y=cumsum(x)
-z=cumsum(y)
-
-dataFrame=data.frame(x,y,z)
-
-```
-
 
 # URooTab along with R Markdown or Quarto document
 
@@ -210,6 +197,22 @@ In R Markdown or Quarto document, `URooTab` is smart enough to recognise the doc
 
 In base R, you can get the table printed in console in the format you specify by the  `format` argument.
 
+We can create a dataframe as follows:
+
+
+```{r,echo=TRUE,eval=FALSE}
+
+library(URooTab)
+set.seed(1234) # for reproducibility
+x=rnorm(100) 
+y=cumsum(x)
+z=cumsum(y)
+
+dataFrame=data.frame(x,y,z)
+
+```
+
+
 ## The adf() function
 
 To print ADF test results in `latex` format:
@@ -219,7 +222,7 @@ To print ADF test results in `latex` format:
 #| eval: false
 
     
-adf(dataFrame,format = "latex",caption = "ADF Unit Root Tests for x, y and Z") %>% cat
+adf(dataFrame,format = "latex",info="aic",caption = "ADF Unit Root Tests for x, y and Z") 
 ```
 
 Or
@@ -229,7 +232,7 @@ Or
 #| eval: false
 
     
-uroot(dataFrame,format = "latex",test = "adf",caption = "ADF Unit Root Tests for x, y and Z")
+uroot(dataFrame,format = "latex",test = "adf",info="aic",caption = "ADF Unit Root Tests for x, y and Z")
 ```
 
 
@@ -244,9 +247,9 @@ The above code produces the following latex code:
 \toprule
 Variables & None & Constant & Constant and trend & None & Constant & Constant and trend & Decision\\
 \midrule
-X & -8.300*** & -8.396*** & -8.815*** & -8.274*** & -8.239*** & -8.214*** & I(0)\\
-Y & 0.417 & -1.907 & 0.026 & -8.148*** & -8.259*** & -8.721*** & I(1)\\
-Z & -2.379** & -2.084 & -2.938 & 0.417 & -2.013 & -0.033 & I(2)\\
+X & -8.300*** & -8.396*** & -8.815*** & -7.494*** & -7.460*** & -7.445*** & I(0)\\
+Y & 0.224 & -1.934 & 0.026 & -8.148*** & -8.259*** & -8.721*** & I(1)\\
+Z & -2.379** & -2.084 & -2.938 & 0.233 & -2.221 & -0.033 & I(2)\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -261,7 +264,7 @@ To print PP test results in `html` format:
 #| label: pp
 #| eval: false
     
-pp(dataFrame,format = "html",caption = "PP Unit Root Tests for x, y and Z")
+pp(dataFrame,format = "html",info="aic",caption = "PP Unit Root Tests for x, y and Z")
 ```
 
 Or
@@ -271,7 +274,7 @@ Or
 #| label: pp1
 #| eval: false
     
-uroot(dataFrame,format = "html",test = "pp",caption = "PP Unit Root Tests for x, y and Z")
+uroot(dataFrame,format = "html",info="aic",test = "pp",caption = "PP Unit Root Tests for x, y and Z")
 ```
 
 The above code produces the following `html` codes in console:
@@ -279,7 +282,7 @@ The above code produces the following `html` codes in console:
 
 ````
 <table>
-<caption>ADF Unit Root Tests for x, y and Z</caption>
+<caption>PP Unit Root Tests for x, y and Z</caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Variables </th>

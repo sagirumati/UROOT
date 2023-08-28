@@ -12,8 +12,12 @@
 #'
 #' @examples library(URooTab)
 #' \dontrun{
-#' Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
-#' uroot(series=Data,test="ADF",info="sic")
+#' set.seed(1234)
+#' x=rnorm(100)
+#' y=cumsum(x)
+#' z=cumsum(y)
+#' dataFrame=data.frame(x,y,z)
+#' uroot(series=dataFrame,format="markdown",info="sic")
 #'
 #'}
 #' @keywords documentation
@@ -351,7 +355,7 @@ wf2=paste0(getwd(),"\\",wf) %>% shQuote_cmd # for EViews to recognise the wf pat
 
 if(length(table)>1){
 for (i in table) import_kable(wf2,table=i,caption = caption, format=format,...) %>% print
-} else import_kable(wf,table=table,caption = caption, format=format,...)
+} else import_kable(wf2,table=table,caption = caption, format=format,...)
 
 }
 

@@ -7,9 +7,12 @@
 #'
 #' @examples library(URooTab)
 #' \dontrun{
-#' Data=data.frame(x=cumsum(rnorm(100)),y=cumsum(rnorm(100)))
-#' adf(series=Data,test="ADF",info="sic")
-#'
+#' set.seed(1234)
+#' x=rnorm(100)
+#' y=cumsum(x)
+#' z=cumsum(y)
+#' dataFrame=data.frame(x,y,z)
+#' adf(series=dataFrame,format="latex",info="aic")
 #'}
 #' @family important functions
 #' @keywords documentation
