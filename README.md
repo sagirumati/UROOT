@@ -115,6 +115,15 @@ Please load the URooTab package as follows:
 
 The package can work with base R, R Markdown or Quarto document.
 
+We can create a dataframe as follows:
+
+    library(URooTab)
+    set.seed(1234)  # for reproducibility
+    x = rnorm(100)
+    y = cumsum(x)
+    z = cumsum(y)
+    dataFrame = data.frame(x, y, z)
+
 # 8 URooTab along with R Markdown or Quarto document
 
 You can use `URooTab` in an R chunk in R Markdown or Quarto document:
