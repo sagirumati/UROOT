@@ -124,6 +124,9 @@ once. It is more suitable for Quarto document, which has both `tbl-cap`
 and `tbl-subcap` chunk options. To produce Table
 <a href="#tab:URooTab">7.1</a>
 
+Notice the chunk option `results: asis` because `uroot()` is designed to
+print all the tables (ADF and PP) in the chunk.
+
     ```{r}
     #| label: URooTab
     #| eval: true
@@ -274,6 +277,10 @@ To print ADF test results in `latex` format:
     adf(dataFrame, format = "latex", caption = "ADF Unit Root Tests for x, y and Z") %>%
         cat
 
+Or
+
+    uroot(dataFrame, format = "latex", test = "adf", caption = "ADF Unit Root Tests for x, y and Z")
+
 The above code produces the following latex code:
 
     \begin{table}[h]
@@ -294,6 +301,12 @@ The above code produces the following latex code:
 To print PP test results in `html` format:
 
     pp(dataFrame, format = "html", caption = "PP Unit Root Tests for x, y and Z")
+
+Or
+
+    uroot(dataFrame, format = "html", test = "pp", caption = "PP Unit Root Tests for x, y and Z")
+
+The above code produces the following `html` codes in console:
 
     <table>
     <caption>ADF Unit Root Tests for x, y and Z</caption>

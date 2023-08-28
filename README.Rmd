@@ -150,6 +150,8 @@ You can use `URooTab` in an R chunk in R Markdown or Quarto document:
 
 The `uroot()` function reports all the available test (ADF and PP) at once. It is more suitable for Quarto document, which has both `tbl-cap` and `tbl-subcap` chunk options. To produce Table \@ref(tab:URooTab)
 
+Notice the chunk option `results: asis` because `uroot()` is designed to print all the tables (ADF and PP) in the chunk.
+
 ````
 ```{r}`r ''`
 #| label: URooTab
@@ -201,6 +203,17 @@ To print ADF test results in `latex` format:
 adf(dataFrame,format = "latex",caption = "ADF Unit Root Tests for x, y and Z") %>% cat
 ```
 
+Or
+
+```{r}
+#| label: adf1
+#| eval: false
+
+    
+uroot(dataFrame,format = "latex",test = "adf",caption = "ADF Unit Root Tests for x, y and Z")
+```
+
+
 The above code produces the following latex code:
 
 ````
@@ -228,6 +241,19 @@ To print PP test results in `html` format:
     
 pp(dataFrame,format = "html",caption = "PP Unit Root Tests for x, y and Z")
 ```
+
+Or
+
+
+```{r}
+#| label: pp1
+#| eval: false
+    
+uroot(dataFrame,format = "html",test = "pp",caption = "PP Unit Root Tests for x, y and Z")
+```
+
+The above code produces the following `html` codes in console:
+
 
 ````
 <table>
