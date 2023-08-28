@@ -179,5 +179,5 @@ adf(dataFrame,format = "markdown",caption = "ADF Unit Root Tests for x, y and Z"
 #| label: pp
 #| eval: true
     
-pp(dataFrame,format = "markdown",caption = "PP Unit Root Tests for x, y and Z")
+pp(dataFrame,format = "html",caption = "PP Unit Root Tests for x, y and Z")
 ```
