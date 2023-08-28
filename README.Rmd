@@ -42,7 +42,14 @@ library(knitr)
 
 Please do not forget to cite the package as follows:
 
+**Plain text:**
+
+
+````
 Mati S. (2023). URooTab: Tabular Reporting of 'EViews' Unit Root Tests. CRAN, https://github.com/sagirumati/URooTab
+````
+
+**Bibtex:**
 
 ````
   @Manual{Mati2023,
