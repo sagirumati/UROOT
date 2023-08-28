@@ -2,26 +2,26 @@
 % Please edit documentation in R/adf.R
 \name{adf}
 \alias{adf}
-\title{Conduct `ADF` unit root test using `EViews` routines}
+\title{Conduct \code{ADF} unit root test using \code{EViews} routines}
 \usage{
 adf(series, info = "sic", caption = NULL, format = kable_format(), ...)
 }
 \arguments{
 \item{series}{A vector of names or wildcard expressions for series object(s) contained in a dataframe.}
 
-\item{info}{Name of the information criterion. For example, `SIC`, `AIC`, `HQ`.}
+\item{info}{Name of the information criterion. For example, \code{SIC}, \code{AIC}, \code{HQ}.}
 
-\item{caption}{Table caption as in `kable`.}
+\item{caption}{Table caption as in \code{kable}.}
 
-\item{format}{Table format in `kable`.}
+\item{format}{Table format in \code{kable}.}
 
-\item{...}{Other arguments supported by `EviewsR` `import_kable()` function.}
+\item{...}{Other arguments supported by \code{EviewsR} \code{import_kable()} function.}
 }
 \value{
 An EViews workfile
 }
 \description{
-Use this function to conduct unit root test using `EViews` routines
+Use this function to conduct unit root test using \code{EViews} routines
 }
 \examples{
 library(URooTab)
