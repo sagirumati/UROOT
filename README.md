@@ -121,7 +121,7 @@ You can use `URooTab` in an R chunk in R Markdown or Quarto document:
 
 The `uroot()` function reports all the available test (ADF and PP) at
 once. It is more suitable for Quarto document, which has both `tbl-cap`
-and `tbl-subcap` chunk options.
+and `tbl-subcap` chunk options. To produce Table @ref{tab:URooTab}
 
     ```{r}
     #| label: URooTab
@@ -276,24 +276,10 @@ the document format and select the suitable table format.
 In base R, you can get the table printed in console in the format you
 specify by the `format` argument.
 
-To print ADF test results in latex format:
+To print ADF test results in `latex` format:
 
     adf(dataFrame, format = "latex", caption = "ADF Unit Root Tests for x, y and Z") %>%
         cat
-    #> \begin{table}[h]
-    #> 
-    #> \caption{(\#tab:adf)ADF Unit Root Tests for x, y and Z}
-    #> \centering
-    #> \begin{tabular}[t]{llllllll}
-    #> \toprule
-    #> Variables & None & Constant & Constant and trend & None & Constant & Constant and trend & Decision\\
-    #> \midrule
-    #> X & -8.300*** & -8.396*** & -8.815*** & -8.274*** & -8.239*** & -8.214*** & I(0)\\
-    #> Y & 0.417 & -1.907 & 0.026 & -8.148*** & -8.259*** & -8.721*** & I(1)\\
-    #> Z & -2.379** & -2.084 & -2.938 & 0.417 & -2.013 & -0.033 & I(2)\\
-    #> \bottomrule
-    #> \end{tabular}
-    #> \end{table}
 
 The above code produces the following latex code:
 
@@ -312,121 +298,9 @@ The above code produces the following latex code:
     \end{tabular}
     \end{table}
 
-    pp(dataFrame, format = "html", caption = "PP Unit Root Tests for x, y and Z")
+To print PP test results in `html` format:
 
-<table>
-<caption>
-<span id="tab:pp"></span>Table 7.2: PP Unit Root Tests for x, y and Z
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Variables
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-Decision
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-X
-</td>
-<td style="text-align:left;">
--8.327\*\*\*
-</td>
-<td style="text-align:left;">
--8.418\*\*\*
-</td>
-<td style="text-align:left;">
--8.815\*\*\*
-</td>
-<td style="text-align:left;">
--42.502\*\*\*
-</td>
-<td style="text-align:left;">
--51.961\*\*\*
-</td>
-<td style="text-align:left;">
--74.206\*\*\*
-</td>
-<td style="text-align:left;">
-I(0)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-0.275
-</td>
-<td style="text-align:left;">
--1.857
-</td>
-<td style="text-align:left;">
--0.066
-</td>
-<td style="text-align:left;">
--8.170\*\*\*
-</td>
-<td style="text-align:left;">
--8.275\*\*\*
-</td>
-<td style="text-align:left;">
--8.721\*\*\*
-</td>
-<td style="text-align:left;">
-I(1)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Z
-</td>
-<td style="text-align:left;">
-6.659
-</td>
-<td style="text-align:left;">
-3.450
-</td>
-<td style="text-align:left;">
--3.516\*\*
-</td>
-<td style="text-align:left;">
-0.274
-</td>
-<td style="text-align:left;">
--1.956
-</td>
-<td style="text-align:left;">
--0.109
-</td>
-<td style="text-align:left;">
-I(2)
-</td>
-</tr>
-</tbody>
-</table>
+    pp(dataFrame, format = "html", caption = "PP Unit Root Tests for x, y and Z")
 
     <table>
     <caption>ADF Unit Root Tests for x, y and Z</caption>
