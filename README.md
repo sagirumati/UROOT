@@ -117,40 +117,206 @@ The package can work with base R, R Markdown or Quarto document.
 
 ## 7.1 URooTab along with R Markdown or Quarto document
 
-You can use `URooTab` in an R chunk in R Markdown or Quarto document
+You can use `URooTab` in an R chunk in R Markdown or Quarto document:
+
+The `uroot()` function reports all the available test (ADF and PP) at
+once. It is more suitable for Quarto document, which has both `tbl-cap`
+and `tbl-subcap` chunk options.
+
+    ```{r}
+    #| label: URooTab
+    #| eval: true
+    #| results: asis
+        
+    library(URooTab)
+    set.seed(1234) # for reproducibility
+    x=rnorm(100)
+    y=cumsum(x)
+    z=cumsum(y)
+
+    dataFrame=data.frame(x,y,z)
+    uroot(dataFrame, caption = "Unit Root Tests for x, y and Z")
+    ```
 
     library(URooTab)
+    set.seed(1234)  # for reproducibility
     x = rnorm(100)
     y = cumsum(x)
     z = cumsum(y)
     dataFrame = data.frame(x, y, z)
     uroot(dataFrame, format = "markdown", caption = "Unit Root Tests for x, y and Z")
-    #> 
-    #> 
-    #> Table: (\#tab:URooTab)Unit Root Tests for x, y and Z
-    #> 
-    #> |Variables |None      |Constant  |Constant and trend |None      |Constant  |Constant and trend |Decision |
-    #> |:---------|:---------|:---------|:------------------|:---------|:---------|:------------------|:--------|
-    #> |X         |-8.413*** |-8.440*** |-8.398***          |-8.858*** |-8.816*** |-8.777***          |I(0)     |
-    #> |Y         |-0.067    |-0.898    |-1.690             |-8.379*** |-8.412*** |-8.373***          |I(1)     |
-    #> |Z         |-1.279    |-1.140    |-2.391             |-0.068    |-0.939    |-1.624             |I(2)     |
-    #> 
-    #> 
-    #> Table: (\#tab:URooTab)Unit Root Tests for x, y and Z
-    #> 
-    #> |Variables |None      |Constant  |Constant and trend |None       |Constant   |Constant and trend |Decision |
-    #> |:---------|:---------|:---------|:------------------|:----------|:----------|:------------------|:--------|
-    #> |X         |-8.365*** |-8.372*** |-8.329***          |-42.073*** |-41.801*** |-44.576***         |I(0)     |
-    #> |Y         |-0.166    |-0.956    |-1.926             |-8.333***  |-8.345***  |-8.305***          |I(1)     |
-    #> |Z         |5.140     |4.164     |-0.428             |-0.168     |-0.995     |-1.870             |I(2)     |
 
-    adf(dataFrame, format = "latex", caption = "ADF Unit Root Tests for x, y and Z")
+<table style="width:100%;">
+<caption><span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x,
+y and Z</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variables</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">-8.300***</td>
+<td style="text-align: left;">-8.396***</td>
+<td style="text-align: left;">-8.815***</td>
+<td style="text-align: left;">-8.274***</td>
+<td style="text-align: left;">-8.239***</td>
+<td style="text-align: left;">-8.214***</td>
+<td style="text-align: left;">I(0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Y</td>
+<td style="text-align: left;">0.417</td>
+<td style="text-align: left;">-1.907</td>
+<td style="text-align: left;">0.026</td>
+<td style="text-align: left;">-8.148***</td>
+<td style="text-align: left;">-8.259***</td>
+<td style="text-align: left;">-8.721***</td>
+<td style="text-align: left;">I(1)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Z</td>
+<td style="text-align: left;">-2.379**</td>
+<td style="text-align: left;">-2.084</td>
+<td style="text-align: left;">-2.938</td>
+<td style="text-align: left;">0.417</td>
+<td style="text-align: left;">-2.013</td>
+<td style="text-align: left;">-0.033</td>
+<td style="text-align: left;">I(2)</td>
+</tr>
+</tbody>
+</table>
+
+<span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x, y and Z
+
+<table>
+<caption><span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x,
+y and Z</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variables</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">-8.327***</td>
+<td style="text-align: left;">-8.418***</td>
+<td style="text-align: left;">-8.815***</td>
+<td style="text-align: left;">-42.502***</td>
+<td style="text-align: left;">-51.961***</td>
+<td style="text-align: left;">-74.206***</td>
+<td style="text-align: left;">I(0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Y</td>
+<td style="text-align: left;">0.275</td>
+<td style="text-align: left;">-1.857</td>
+<td style="text-align: left;">-0.066</td>
+<td style="text-align: left;">-8.170***</td>
+<td style="text-align: left;">-8.275***</td>
+<td style="text-align: left;">-8.721***</td>
+<td style="text-align: left;">I(1)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Z</td>
+<td style="text-align: left;">6.659</td>
+<td style="text-align: left;">3.450</td>
+<td style="text-align: left;">-3.516**</td>
+<td style="text-align: left;">0.274</td>
+<td style="text-align: left;">-1.956</td>
+<td style="text-align: left;">-0.109</td>
+<td style="text-align: left;">I(2)</td>
+</tr>
+</tbody>
+</table>
+
+<span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x, y and Z
+
+In R Markdown or Quarto document, `URooTab` is smart enough to recognise
+the document format and select the suitable table format.
+
+## 7.2 URooTab along with base R.
+
+In base R, you can get the table printed in console in the format you
+specify by the `format` argument.
+
+To print ADF test results in latex format:
+
+    adf(dataFrame, format = "latex", caption = "ADF Unit Root Tests for x, y and Z") %>%
+        cat
+    #> \begin{table}[h]
+    #> 
+    #> \caption{(\#tab:adf)ADF Unit Root Tests for x, y and Z}
+    #> \centering
+    #> \begin{tabular}[t]{llllllll}
+    #> \toprule
+    #> Variables & None & Constant & Constant and trend & None & Constant & Constant and trend & Decision\\
+    #> \midrule
+    #> X & -8.300*** & -8.396*** & -8.815*** & -8.274*** & -8.239*** & -8.214*** & I(0)\\
+    #> Y & 0.417 & -1.907 & 0.026 & -8.148*** & -8.259*** & -8.721*** & I(1)\\
+    #> Z & -2.379** & -2.084 & -2.938 & 0.417 & -2.013 & -0.033 & I(2)\\
+    #> \bottomrule
+    #> \end{tabular}
+    #> \end{table}
+
+The above code produces the following latex code:
+
+    \begin{table}[h]
+
+    \caption{ADF Unit Root Tests for x, y and Z}
+    \centering
+    \begin{tabular}[t]{llllllll}
+    \toprule
+    Variables & None & Constant & Constant and trend & None & Constant & Constant and trend & Decision\\
+    \midrule
+    X & -8.300*** & -8.396*** & -8.815*** & -8.274*** & -8.239*** & -8.214*** & I(0)\\
+    Y & 0.417 & -1.907 & 0.026 & -8.148*** & -8.259*** & -8.721*** & I(1)\\
+    Z & -2.379** & -2.084 & -2.938 & 0.417 & -2.013 & -0.033 & I(2)\\
+    \bottomrule
+    \end{tabular}
+    \end{table}
 
     pp(dataFrame, format = "html", caption = "PP Unit Root Tests for x, y and Z")
 
 <table>
 <caption>
-<span id="tab:pp"></span>Table 7.1: PP Unit Root Tests for x, y and Z
+<span id="tab:pp"></span>Table 7.2: PP Unit Root Tests for x, y and Z
 </caption>
 <thead>
 <tr>
@@ -186,22 +352,22 @@ Decision
 X
 </td>
 <td style="text-align:left;">
--8.365\*\*\*
+-8.327\*\*\*
 </td>
 <td style="text-align:left;">
--8.372\*\*\*
+-8.418\*\*\*
 </td>
 <td style="text-align:left;">
--8.329\*\*\*
+-8.815\*\*\*
 </td>
 <td style="text-align:left;">
--42.073\*\*\*
+-42.502\*\*\*
 </td>
 <td style="text-align:left;">
--41.801\*\*\*
+-51.961\*\*\*
 </td>
 <td style="text-align:left;">
--44.576\*\*\*
+-74.206\*\*\*
 </td>
 <td style="text-align:left;">
 I(0)
@@ -212,22 +378,22 @@ I(0)
 Y
 </td>
 <td style="text-align:left;">
--0.166
+0.275
 </td>
 <td style="text-align:left;">
--0.956
+-1.857
 </td>
 <td style="text-align:left;">
--1.926
+-0.066
 </td>
 <td style="text-align:left;">
--8.333\*\*\*
+-8.170\*\*\*
 </td>
 <td style="text-align:left;">
--8.345\*\*\*
+-8.275\*\*\*
 </td>
 <td style="text-align:left;">
--8.305\*\*\*
+-8.721\*\*\*
 </td>
 <td style="text-align:left;">
 I(1)
@@ -238,22 +404,22 @@ I(1)
 Z
 </td>
 <td style="text-align:left;">
-5.140
+6.659
 </td>
 <td style="text-align:left;">
-4.164
+3.450
 </td>
 <td style="text-align:left;">
--0.428
+-3.516\*\*
 </td>
 <td style="text-align:left;">
--0.168
+0.274
 </td>
 <td style="text-align:left;">
--0.995
+-1.956
 </td>
 <td style="text-align:left;">
--1.870
+-0.109
 </td>
 <td style="text-align:left;">
 I(2)
@@ -261,3 +427,51 @@ I(2)
 </tr>
 </tbody>
 </table>
+
+    <table>
+    <caption>ADF Unit Root Tests for x, y and Z</caption>
+     <thead>
+      <tr>
+       <th style="text-align:left;"> Variables </th>
+       <th style="text-align:left;"> None </th>
+       <th style="text-align:left;"> Constant </th>
+       <th style="text-align:left;"> Constant and trend </th>
+       <th style="text-align:left;"> None </th>
+       <th style="text-align:left;"> Constant </th>
+       <th style="text-align:left;"> Constant and trend </th>
+       <th style="text-align:left;"> Decision </th>
+      </tr>
+     </thead>
+    <tbody>
+      <tr>
+       <td style="text-align:left;"> X </td>
+       <td style="text-align:left;"> -8.327*** </td>
+       <td style="text-align:left;"> -8.418*** </td>
+       <td style="text-align:left;"> -8.815*** </td>
+       <td style="text-align:left;"> -42.502*** </td>
+       <td style="text-align:left;"> -51.961*** </td>
+       <td style="text-align:left;"> -74.206*** </td>
+       <td style="text-align:left;"> I(0) </td>
+      </tr>
+      <tr>
+       <td style="text-align:left;"> Y </td>
+       <td style="text-align:left;"> 0.275 </td>
+       <td style="text-align:left;"> -1.857 </td>
+       <td style="text-align:left;"> -0.066 </td>
+       <td style="text-align:left;"> -8.170*** </td>
+       <td style="text-align:left;"> -8.275*** </td>
+       <td style="text-align:left;"> -8.721*** </td>
+       <td style="text-align:left;"> I(1) </td>
+      </tr>
+      <tr>
+       <td style="text-align:left;"> Z </td>
+       <td style="text-align:left;"> 6.659 </td>
+       <td style="text-align:left;"> 3.450 </td>
+       <td style="text-align:left;"> -3.516** </td>
+       <td style="text-align:left;"> 0.274 </td>
+       <td style="text-align:left;"> -1.956 </td>
+       <td style="text-align:left;"> -0.109 </td>
+       <td style="text-align:left;"> I(2) </td>
+      </tr>
+    </tbody>
+    </table>
