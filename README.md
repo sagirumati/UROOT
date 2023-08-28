@@ -20,7 +20,7 @@ Please do not forget to cite the package as follows:
 **Bibtex:**
 
       @Manual{Mati2023,
-        title = {URooTab: Tabular Reporting of 'EViews' Unit Root Tests},
+        title = {{URooTab}: Tabular Reporting of {EViews} Unit Root Tests},
         author = {Sagiru Mati},
         publisher = {CRAN},
         url = {https://github.com/sagirumati/URooTab},
@@ -147,32 +147,32 @@ y and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-9.537***</td>
-<td style="text-align: left;">-9.873***</td>
-<td style="text-align: left;">-9.855***</td>
-<td style="text-align: left;">-8.645***</td>
-<td style="text-align: left;">-8.604***</td>
-<td style="text-align: left;">-8.577***</td>
+<td style="text-align: left;">-9.922***</td>
+<td style="text-align: left;">-9.890***</td>
+<td style="text-align: left;">-9.889***</td>
+<td style="text-align: left;">-9.811***</td>
+<td style="text-align: left;">-9.757***</td>
+<td style="text-align: left;">-9.705***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">1.116</td>
-<td style="text-align: left;">-1.413</td>
-<td style="text-align: left;">-2.092</td>
-<td style="text-align: left;">-9.523***</td>
-<td style="text-align: left;">-9.816***</td>
-<td style="text-align: left;">-9.782***</td>
+<td style="text-align: left;">-1.391</td>
+<td style="text-align: left;">-1.308</td>
+<td style="text-align: left;">-2.211</td>
+<td style="text-align: left;">-9.747***</td>
+<td style="text-align: left;">-9.709***</td>
+<td style="text-align: left;">-9.732***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">0.176</td>
-<td style="text-align: left;">1.199</td>
-<td style="text-align: left;">-0.800</td>
-<td style="text-align: left;">1.120</td>
-<td style="text-align: left;">-1.242</td>
-<td style="text-align: left;">-2.009</td>
+<td style="text-align: left;">-1.025</td>
+<td style="text-align: left;">-2.323</td>
+<td style="text-align: left;">-1.171</td>
+<td style="text-align: left;">-1.356</td>
+<td style="text-align: left;">-1.301</td>
+<td style="text-align: left;">-2.382</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
@@ -208,32 +208,32 @@ y and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-9.559***</td>
-<td style="text-align: left;">-9.873***</td>
-<td style="text-align: left;">-9.856***</td>
-<td style="text-align: left;">-81.834***</td>
-<td style="text-align: left;">-93.905***</td>
-<td style="text-align: left;">-93.233***</td>
+<td style="text-align: left;">-9.926***</td>
+<td style="text-align: left;">-9.893***</td>
+<td style="text-align: left;">-9.900***</td>
+<td style="text-align: left;">-83.679***</td>
+<td style="text-align: left;">-83.357***</td>
+<td style="text-align: left;">-88.140***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">1.078</td>
-<td style="text-align: left;">-1.414</td>
-<td style="text-align: left;">-2.157</td>
-<td style="text-align: left;">-9.543***</td>
-<td style="text-align: left;">-9.816***</td>
-<td style="text-align: left;">-9.783***</td>
+<td style="text-align: left;">-1.391</td>
+<td style="text-align: left;">-1.308</td>
+<td style="text-align: left;">-2.211</td>
+<td style="text-align: left;">-9.749***</td>
+<td style="text-align: left;">-9.709***</td>
+<td style="text-align: left;">-9.742***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">11.051</td>
-<td style="text-align: left;">7.875</td>
-<td style="text-align: left;">-0.357</td>
-<td style="text-align: left;">1.071</td>
-<td style="text-align: left;">-1.245</td>
-<td style="text-align: left;">-2.084</td>
+<td style="text-align: left;">0.022</td>
+<td style="text-align: left;">-1.855</td>
+<td style="text-align: left;">0.138</td>
+<td style="text-align: left;">-1.356</td>
+<td style="text-align: left;">-1.301</td>
+<td style="text-align: left;">-2.382</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
@@ -269,32 +269,32 @@ y and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-9.537***</td>
-<td style="text-align: left;">-9.873***</td>
-<td style="text-align: left;">-9.855***</td>
-<td style="text-align: left;">-8.645***</td>
-<td style="text-align: left;">-8.604***</td>
-<td style="text-align: left;">-8.577***</td>
+<td style="text-align: left;">-9.922***</td>
+<td style="text-align: left;">-9.890***</td>
+<td style="text-align: left;">-9.889***</td>
+<td style="text-align: left;">-9.811***</td>
+<td style="text-align: left;">-9.757***</td>
+<td style="text-align: left;">-9.705***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">1.116</td>
-<td style="text-align: left;">-1.413</td>
-<td style="text-align: left;">-2.092</td>
-<td style="text-align: left;">-9.523***</td>
-<td style="text-align: left;">-9.816***</td>
-<td style="text-align: left;">-9.782***</td>
+<td style="text-align: left;">-1.391</td>
+<td style="text-align: left;">-1.308</td>
+<td style="text-align: left;">-2.211</td>
+<td style="text-align: left;">-9.747***</td>
+<td style="text-align: left;">-9.709***</td>
+<td style="text-align: left;">-9.732***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">0.176</td>
-<td style="text-align: left;">1.199</td>
-<td style="text-align: left;">-0.800</td>
-<td style="text-align: left;">1.120</td>
-<td style="text-align: left;">-1.242</td>
-<td style="text-align: left;">-2.009</td>
+<td style="text-align: left;">-1.025</td>
+<td style="text-align: left;">-2.323</td>
+<td style="text-align: left;">-1.171</td>
+<td style="text-align: left;">-1.356</td>
+<td style="text-align: left;">-1.301</td>
+<td style="text-align: left;">-2.382</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
@@ -330,32 +330,32 @@ and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-9.559***</td>
-<td style="text-align: left;">-9.873***</td>
-<td style="text-align: left;">-9.856***</td>
-<td style="text-align: left;">-81.834***</td>
-<td style="text-align: left;">-93.905***</td>
-<td style="text-align: left;">-93.233***</td>
+<td style="text-align: left;">-9.926***</td>
+<td style="text-align: left;">-9.893***</td>
+<td style="text-align: left;">-9.900***</td>
+<td style="text-align: left;">-83.679***</td>
+<td style="text-align: left;">-83.357***</td>
+<td style="text-align: left;">-88.140***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">1.078</td>
-<td style="text-align: left;">-1.414</td>
-<td style="text-align: left;">-2.157</td>
-<td style="text-align: left;">-9.543***</td>
-<td style="text-align: left;">-9.816***</td>
-<td style="text-align: left;">-9.783***</td>
+<td style="text-align: left;">-1.391</td>
+<td style="text-align: left;">-1.308</td>
+<td style="text-align: left;">-2.211</td>
+<td style="text-align: left;">-9.749***</td>
+<td style="text-align: left;">-9.709***</td>
+<td style="text-align: left;">-9.742***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">11.051</td>
-<td style="text-align: left;">7.875</td>
-<td style="text-align: left;">-0.357</td>
-<td style="text-align: left;">1.071</td>
-<td style="text-align: left;">-1.245</td>
-<td style="text-align: left;">-2.084</td>
+<td style="text-align: left;">0.022</td>
+<td style="text-align: left;">-1.855</td>
+<td style="text-align: left;">0.138</td>
+<td style="text-align: left;">-1.356</td>
+<td style="text-align: left;">-1.301</td>
+<td style="text-align: left;">-2.382</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>

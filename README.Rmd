@@ -53,7 +53,7 @@ Mati S. (2023). URooTab: Tabular Reporting of 'EViews' Unit Root Tests. CRAN, ht
 
 ````
   @Manual{Mati2023,
-    title = {URooTab: Tabular Reporting of 'EViews' Unit Root Tests},
+    title = {{URooTab}: Tabular Reporting of {EViews} Unit Root Tests},
     author = {Sagiru Mati},
     publisher = {CRAN},
     url = {https://github.com/sagirumati/URooTab},
@@ -77,8 +77,6 @@ Please follow his publications on:
 [**Web of Science**](https://www.webofscience.com/wos/author/record/P-3408-2017)
 
 [**ORCID: 0000-0003-1413-3974**](https://orcid.org/0000-0003-1413-3974)
-
-
 
 
 
@@ -155,6 +153,7 @@ You can use `URooTab` in an R chunk in R Markdown or Quarto document
 #| label: URooTab
 #| eval: true
 #| echo: false
+#| output: asis
 #| results: asis
     
 library(URooTab)
