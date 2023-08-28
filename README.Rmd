@@ -184,7 +184,7 @@ y=cumsum(x)
 z=cumsum(y)
 
 dataFrame=data.frame(x,y,z)
-uroot(dataFrame,format = "html", caption = "Unit Root Tests for x, y and Z")
+uroot(dataFrame,format = "markdown", caption = "Unit Root Tests for x, y and Z")
 ```
 
 In R Markdown or Quarto document, `URooTab` is smart enough to recognise the document format and select the suitable table format.

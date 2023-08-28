@@ -145,232 +145,127 @@ multiple `kable` tables, `results: asis` is necessary. You can also use
     uroot(dataFrame, caption = "Unit Root Tests for x, y and Z")
     ```
 
-<table>
-<caption>
-<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
-</caption>
+<table style="width:100%;">
+<caption><span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x,
+y and Z</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variables
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-Decision
-</th>
+<tr class="header">
+<th style="text-align: left;">Variables</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">Decision</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-X
-</td>
-<td style="text-align:left;">
--8.300\*\*\*
-</td>
-<td style="text-align:left;">
--8.396\*\*\*
-</td>
-<td style="text-align:left;">
--8.815\*\*\*
-</td>
-<td style="text-align:left;">
--8.274\*\*\*
-</td>
-<td style="text-align:left;">
--8.239\*\*\*
-</td>
-<td style="text-align:left;">
--8.214\*\*\*
-</td>
-<td style="text-align:left;">
-I(0)
-</td>
+<tr class="odd">
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">-8.300***</td>
+<td style="text-align: left;">-8.396***</td>
+<td style="text-align: left;">-8.815***</td>
+<td style="text-align: left;">-8.274***</td>
+<td style="text-align: left;">-8.239***</td>
+<td style="text-align: left;">-8.214***</td>
+<td style="text-align: left;">I(0)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-0.417
-</td>
-<td style="text-align:left;">
--1.907
-</td>
-<td style="text-align:left;">
-0.026
-</td>
-<td style="text-align:left;">
--8.148\*\*\*
-</td>
-<td style="text-align:left;">
--8.259\*\*\*
-</td>
-<td style="text-align:left;">
--8.721\*\*\*
-</td>
-<td style="text-align:left;">
-I(1)
-</td>
+<tr class="even">
+<td style="text-align: left;">Y</td>
+<td style="text-align: left;">0.417</td>
+<td style="text-align: left;">-1.907</td>
+<td style="text-align: left;">0.026</td>
+<td style="text-align: left;">-8.148***</td>
+<td style="text-align: left;">-8.259***</td>
+<td style="text-align: left;">-8.721***</td>
+<td style="text-align: left;">I(1)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Z
-</td>
-<td style="text-align:left;">
--2.379\*\*
-</td>
-<td style="text-align:left;">
--2.084
-</td>
-<td style="text-align:left;">
--2.938
-</td>
-<td style="text-align:left;">
-0.417
-</td>
-<td style="text-align:left;">
--2.013
-</td>
-<td style="text-align:left;">
--0.033
-</td>
-<td style="text-align:left;">
-I(2)
-</td>
+<tr class="odd">
+<td style="text-align: left;">Z</td>
+<td style="text-align: left;">-2.379**</td>
+<td style="text-align: left;">-2.084</td>
+<td style="text-align: left;">-2.938</td>
+<td style="text-align: left;">0.417</td>
+<td style="text-align: left;">-2.013</td>
+<td style="text-align: left;">-0.033</td>
+<td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
 </table>
-<table>
-<caption>
+
 <span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
-</caption>
+
+<table>
+<caption><span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x,
+y and Z</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variables
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-None
-</th>
-<th style="text-align:left;">
-Constant
-</th>
-<th style="text-align:left;">
-Constant and trend
-</th>
-<th style="text-align:left;">
-Decision
-</th>
+<tr class="header">
+<th style="text-align: left;">Variables</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">None</th>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Constant and trend</th>
+<th style="text-align: left;">Decision</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-X
-</td>
-<td style="text-align:left;">
--8.327\*\*\*
-</td>
-<td style="text-align:left;">
--8.418\*\*\*
-</td>
-<td style="text-align:left;">
--8.815\*\*\*
-</td>
-<td style="text-align:left;">
--42.502\*\*\*
-</td>
-<td style="text-align:left;">
--51.961\*\*\*
-</td>
-<td style="text-align:left;">
--74.206\*\*\*
-</td>
-<td style="text-align:left;">
-I(0)
-</td>
+<tr class="odd">
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">-8.327***</td>
+<td style="text-align: left;">-8.418***</td>
+<td style="text-align: left;">-8.815***</td>
+<td style="text-align: left;">-42.502***</td>
+<td style="text-align: left;">-51.961***</td>
+<td style="text-align: left;">-74.206***</td>
+<td style="text-align: left;">I(0)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-0.275
-</td>
-<td style="text-align:left;">
--1.857
-</td>
-<td style="text-align:left;">
--0.066
-</td>
-<td style="text-align:left;">
--8.170\*\*\*
-</td>
-<td style="text-align:left;">
--8.275\*\*\*
-</td>
-<td style="text-align:left;">
--8.721\*\*\*
-</td>
-<td style="text-align:left;">
-I(1)
-</td>
+<tr class="even">
+<td style="text-align: left;">Y</td>
+<td style="text-align: left;">0.275</td>
+<td style="text-align: left;">-1.857</td>
+<td style="text-align: left;">-0.066</td>
+<td style="text-align: left;">-8.170***</td>
+<td style="text-align: left;">-8.275***</td>
+<td style="text-align: left;">-8.721***</td>
+<td style="text-align: left;">I(1)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Z
-</td>
-<td style="text-align:left;">
-6.659
-</td>
-<td style="text-align:left;">
-3.450
-</td>
-<td style="text-align:left;">
--3.516\*\*
-</td>
-<td style="text-align:left;">
-0.274
-</td>
-<td style="text-align:left;">
--1.956
-</td>
-<td style="text-align:left;">
--0.109
-</td>
-<td style="text-align:left;">
-I(2)
-</td>
+<tr class="odd">
+<td style="text-align: left;">Z</td>
+<td style="text-align: left;">6.659</td>
+<td style="text-align: left;">3.450</td>
+<td style="text-align: left;">-3.516**</td>
+<td style="text-align: left;">0.274</td>
+<td style="text-align: left;">-1.956</td>
+<td style="text-align: left;">-0.109</td>
+<td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
 </table>
+
+<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
 
 In R Markdown or Quarto document, `URooTab` is smart enough to recognise
 the document format and select the suitable table format.
