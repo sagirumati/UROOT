@@ -152,9 +152,7 @@ You can use `URooTab` in an R chunk in R Markdown or Quarto document
 ```{r}
 #| label: URooTab
 #| eval: true
-#| echo: false
-#| output: asis
-#| results: asis
+#| #results: asis
     
 library(URooTab)
 
@@ -171,7 +169,7 @@ uroot(dataFrame,format = "markdown", caption = "Unit Root Tests for x, y and Z")
 ```{r}
 #| label: adf
 #| eval: true
-#| echo: false
+
     
 adf(dataFrame,format = "markdown",caption = "ADF Unit Root Tests for x, y and Z")
 ```
@@ -180,7 +178,6 @@ adf(dataFrame,format = "markdown",caption = "ADF Unit Root Tests for x, y and Z"
 ```{r}
 #| label: pp
 #| eval: true
-#| echo: false
     
 pp(dataFrame,format = "markdown",caption = "PP Unit Root Tests for x, y and Z")
 ```
