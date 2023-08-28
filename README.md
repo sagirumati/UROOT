@@ -1,6 +1,6 @@
 # URooTab: URooTab: Tabular Reporting of ‘EViews’ Unit Root Tests
 
-# Sunday: August 27, 2023
+# Monday: August 28, 2023
 
 <!-- <img src="inst/figures/URooTab.png" align="right" width="120" /> -->
 
@@ -101,18 +101,18 @@ The package can work with base R, R Markdown or Quarto document.
 
 You can use `URooTab` in an R chunk in R Markdown or Quarto document
 
-<table style="width:100%;">
+<table>
 <caption><span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x,
 y and Z</caption>
 <colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
 <col style="width: 9%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 8%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -129,32 +129,32 @@ y and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-10.875***</td>
-<td style="text-align: left;">-10.889***</td>
-<td style="text-align: left;">-10.831***</td>
-<td style="text-align: left;">-9.121***</td>
-<td style="text-align: left;">-9.070***</td>
-<td style="text-align: left;">-9.023***</td>
+<td style="text-align: left;">-8.917***</td>
+<td style="text-align: left;">-8.871***</td>
+<td style="text-align: left;">-8.867***</td>
+<td style="text-align: left;">-10.074***</td>
+<td style="text-align: left;">-10.020***</td>
+<td style="text-align: left;">-9.965***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">-0.263</td>
-<td style="text-align: left;">-2.058</td>
-<td style="text-align: left;">-2.398</td>
-<td style="text-align: left;">-10.857***</td>
-<td style="text-align: left;">-10.861***</td>
-<td style="text-align: left;">-10.804***</td>
+<td style="text-align: left;">-1.536</td>
+<td style="text-align: left;">-2.094</td>
+<td style="text-align: left;">-1.956</td>
+<td style="text-align: left;">-8.927***</td>
+<td style="text-align: left;">-8.881***</td>
+<td style="text-align: left;">-8.863***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">1.492</td>
-<td style="text-align: left;">0.989</td>
-<td style="text-align: left;">-1.021</td>
-<td style="text-align: left;">-0.273</td>
-<td style="text-align: left;">-1.993</td>
-<td style="text-align: left;">-2.353</td>
+<td style="text-align: left;">0.181</td>
+<td style="text-align: left;">-0.711</td>
+<td style="text-align: left;">-3.302*</td>
+<td style="text-align: left;">-1.548</td>
+<td style="text-align: left;">-2.031</td>
+<td style="text-align: left;">-1.937</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
@@ -162,18 +162,18 @@ y and Z</caption>
 
 <span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x, y and Z
 
-<table style="width:100%;">
+<table>
 <caption><span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x,
 y and Z</caption>
 <colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
 <col style="width: 9%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 8%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -190,32 +190,32 @@ y and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-10.957***</td>
-<td style="text-align: left;">-10.992***</td>
-<td style="text-align: left;">-10.930***</td>
-<td style="text-align: left;">-59.942***</td>
-<td style="text-align: left;">-59.785***</td>
-<td style="text-align: left;">-60.288***</td>
+<td style="text-align: left;">-8.881***</td>
+<td style="text-align: left;">-8.833***</td>
+<td style="text-align: left;">-8.829***</td>
+<td style="text-align: left;">-49.027***</td>
+<td style="text-align: left;">-51.282***</td>
+<td style="text-align: left;">-50.851***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">-0.065</td>
-<td style="text-align: left;">-1.963</td>
-<td style="text-align: left;">-2.353</td>
-<td style="text-align: left;">-10.948***</td>
-<td style="text-align: left;">-10.972***</td>
-<td style="text-align: left;">-10.912***</td>
+<td style="text-align: left;">-1.617*</td>
+<td style="text-align: left;">-2.213</td>
+<td style="text-align: left;">-2.095</td>
+<td style="text-align: left;">-8.901***</td>
+<td style="text-align: left;">-8.854***</td>
+<td style="text-align: left;">-8.834***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">6.649</td>
-<td style="text-align: left;">2.247</td>
-<td style="text-align: left;">-0.530</td>
-<td style="text-align: left;">-0.110</td>
-<td style="text-align: left;">-1.888</td>
-<td style="text-align: left;">-2.301</td>
+<td style="text-align: left;">3.278</td>
+<td style="text-align: left;">0.751</td>
+<td style="text-align: left;">-2.009</td>
+<td style="text-align: left;">-1.638*</td>
+<td style="text-align: left;">-2.165</td>
+<td style="text-align: left;">-2.093</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
@@ -223,18 +223,18 @@ y and Z</caption>
 
 <span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x, y and Z
 
-<table style="width:100%;">
+<table>
 <caption><span id="tab:adf"></span>Table 7.2: ADF Unit Root Tests for x,
 y and Z</caption>
 <colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
 <col style="width: 9%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 8%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -251,32 +251,32 @@ y and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-10.875***</td>
-<td style="text-align: left;">-10.889***</td>
-<td style="text-align: left;">-10.831***</td>
-<td style="text-align: left;">-9.121***</td>
-<td style="text-align: left;">-9.070***</td>
-<td style="text-align: left;">-9.023***</td>
+<td style="text-align: left;">-8.917***</td>
+<td style="text-align: left;">-8.871***</td>
+<td style="text-align: left;">-8.867***</td>
+<td style="text-align: left;">-10.074***</td>
+<td style="text-align: left;">-10.020***</td>
+<td style="text-align: left;">-9.965***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">-0.263</td>
-<td style="text-align: left;">-2.058</td>
-<td style="text-align: left;">-2.398</td>
-<td style="text-align: left;">-10.857***</td>
-<td style="text-align: left;">-10.861***</td>
-<td style="text-align: left;">-10.804***</td>
+<td style="text-align: left;">-1.536</td>
+<td style="text-align: left;">-2.094</td>
+<td style="text-align: left;">-1.956</td>
+<td style="text-align: left;">-8.927***</td>
+<td style="text-align: left;">-8.881***</td>
+<td style="text-align: left;">-8.863***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">1.492</td>
-<td style="text-align: left;">0.989</td>
-<td style="text-align: left;">-1.021</td>
-<td style="text-align: left;">-0.273</td>
-<td style="text-align: left;">-1.993</td>
-<td style="text-align: left;">-2.353</td>
+<td style="text-align: left;">0.181</td>
+<td style="text-align: left;">-0.711</td>
+<td style="text-align: left;">-3.302*</td>
+<td style="text-align: left;">-1.548</td>
+<td style="text-align: left;">-2.031</td>
+<td style="text-align: left;">-1.937</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>
@@ -284,18 +284,18 @@ y and Z</caption>
 
 <span id="tab:adf"></span>Table 7.2: ADF Unit Root Tests for x, y and Z
 
-<table style="width:100%;">
+<table>
 <caption><span id="tab:pp"></span>Table 7.3: PP Unit Root Tests for x, y
 and Z</caption>
 <colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
 <col style="width: 9%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 18%" />
-<col style="width: 8%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -312,32 +312,32 @@ and Z</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X</td>
-<td style="text-align: left;">-10.957***</td>
-<td style="text-align: left;">-10.992***</td>
-<td style="text-align: left;">-10.930***</td>
-<td style="text-align: left;">-59.942***</td>
-<td style="text-align: left;">-59.785***</td>
-<td style="text-align: left;">-60.288***</td>
+<td style="text-align: left;">-8.881***</td>
+<td style="text-align: left;">-8.833***</td>
+<td style="text-align: left;">-8.829***</td>
+<td style="text-align: left;">-49.027***</td>
+<td style="text-align: left;">-51.282***</td>
+<td style="text-align: left;">-50.851***</td>
 <td style="text-align: left;">I(0)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Y</td>
-<td style="text-align: left;">-0.065</td>
-<td style="text-align: left;">-1.963</td>
-<td style="text-align: left;">-2.353</td>
-<td style="text-align: left;">-10.948***</td>
-<td style="text-align: left;">-10.972***</td>
-<td style="text-align: left;">-10.912***</td>
+<td style="text-align: left;">-1.617*</td>
+<td style="text-align: left;">-2.213</td>
+<td style="text-align: left;">-2.095</td>
+<td style="text-align: left;">-8.901***</td>
+<td style="text-align: left;">-8.854***</td>
+<td style="text-align: left;">-8.834***</td>
 <td style="text-align: left;">I(1)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Z</td>
-<td style="text-align: left;">6.649</td>
-<td style="text-align: left;">2.247</td>
-<td style="text-align: left;">-0.530</td>
-<td style="text-align: left;">-0.110</td>
-<td style="text-align: left;">-1.888</td>
-<td style="text-align: left;">-2.301</td>
+<td style="text-align: left;">3.278</td>
+<td style="text-align: left;">0.751</td>
+<td style="text-align: left;">-2.009</td>
+<td style="text-align: left;">-1.638*</td>
+<td style="text-align: left;">-2.165</td>
+<td style="text-align: left;">-2.093</td>
 <td style="text-align: left;">I(2)</td>
 </tr>
 </tbody>

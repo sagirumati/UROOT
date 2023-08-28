@@ -29,8 +29,8 @@ uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,format=kable
    test=paste(test,collapse = " ")
 
 
-wf=tempfile("URooTab",".",fileext = ".wf1")
-on.exit(unlink(wf,recursive = T,force = T))
+wf=tempfile("UROOTAB",".",fileext = ".wf1")
+on.exit(unlink(wf))
 wf1= paste0("%wf=", shQuote_cmd(wf))
 
 fileName=tempfile("URooTab",".",fileext = ".prg")
@@ -347,10 +347,10 @@ writeLines(c(eviews_path(),series,test,wf1,info,EviewsCodes),fileName)
 system_exec()
 unlink_eviews()
 
-wf=paste0(getwd(),"\\",wf) %>% shQuote_cmd
+wf2=paste0(getwd(),"\\",wf) %>% shQuote_cmd # for EViews to recognise the wf path.
 
 if(length(table)>1){
-for (i in table) import_kable(wf,table=i,caption = caption, format=format,...) %>% print
+for (i in table) import_kable(wf2,table=i,caption = caption, format=format,...) %>% print
 } else import_kable(wf,table=table,caption = caption, format=format,...)
 
 }
