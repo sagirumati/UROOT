@@ -40,6 +40,16 @@ library(knitr)
 <!-- badges: end -->
 
 
+Please do not forget to cite the package as follows:
+
+Mati S. (2023). URooTab: Tabular Reporting of 'EViews' Unit Root Tests. CRAN, https://github.com/sagirumati/URooTab
+
+  @Manual{2023,
+    title = {URooTab: Tabular Reporting of 'EViews' Unit Root Tests},
+    author = {Sagiru Mati},
+    publisher = {CRAN},
+    url = {https://github.com/sagirumati/URooTab},
+  }
 # About the Author
 
 The author of this package, **Sagiru Mati**, obtained his PhD in
@@ -65,17 +75,19 @@ Please follow his publications on:
 
 # About URooTab
 
-URooTab is an R package that can conduct EViews unit root tests and report them in tabular form.
+URooTab is an R package that can conducts `EViews` unit root tests and report them in tabular form.
 
 # Why URooTab?
 
 While there are R packages and EViews add-ins available for presenting unit root tests in tabular form, none of them incorporates **EViews** procedures within the R environment. Specifically:
 
-* I wish I could conduct unit root using EViews routines in R Markdown or Quarto document
+* I wish I could conduct unit root using EViews routines in R, R Markdown or Quarto document
 
 * I wish I could dynamically import the results of the unit root tests individually or at once into R, R Markdown or Quarto document without switching between these applications back and forth.
 
 * I wish I could use an  R function to report unit root test in a table style suitable for publication.
+
+* I wish I could automatically format the table in `Latex`, `html`, `pandoc` and `markdown`.
 
 * I wish I could do all of the above from R, R Markdown or Quarto without opening the EViews!!!
 
