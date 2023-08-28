@@ -115,7 +115,7 @@ Please load the URooTab package as follows:
 
 The package can work with base R, R Markdown or Quarto document.
 
-## 7.1 URooTab along with R Markdown or Quarto document
+# 8 URooTab along with R Markdown or Quarto document
 
 You can use `URooTab` in an R chunk in R Markdown or Quarto document:
 
@@ -123,7 +123,7 @@ The `uroot()` function reports all the available test (ADF and PP) at
 once. It is more suitable for Quarto document, which has both `tbl-cap`
 and `tbl-subcap` chunk options.
 
-To produce Table <a href="#tab:URooTab">7.1</a>, use the R chunk below:
+To produce Table <a href="#tab:URooTab">8.1</a>, use the R chunk below:
 
 Notice the chunk option `results: asis` because `uroot()` is designed to
 print all the tables (ADF and PP) in the chunk. If you are producing
@@ -147,7 +147,7 @@ multiple `kable` tables, `results: asis` is necessary. You can also use
 
 <table>
 <caption>
-<span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x, y and Z
+<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
 </caption>
 <thead>
 <tr>
@@ -260,7 +260,7 @@ I(2)
 </table>
 <table>
 <caption>
-<span id="tab:URooTab"></span>Table 7.1: Unit Root Tests for x, y and Z
+<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
 </caption>
 <thead>
 <tr>
@@ -375,10 +375,12 @@ I(2)
 In R Markdown or Quarto document, `URooTab` is smart enough to recognise
 the document format and select the suitable table format.
 
-## 7.2 URooTab along with base R.
+# 9 URooTab along with base R.
 
 In base R, you can get the table printed in console in the format you
 specify by the `format` argument.
+
+## 9.1 The adf() function
 
 To print ADF test results in `latex` format:
 
@@ -405,6 +407,8 @@ The above code produces the following latex code:
     \bottomrule
     \end{tabular}
     \end{table}
+
+## 9.2 The pp() function
 
 To print PP test results in `html` format:
 
@@ -463,3 +467,10 @@ The above code produces the following `html` codes in console:
       </tr>
     </tbody>
     </table>
+
+## 9.3 The uroot() function
+
+The `uroot()` function is a generic function that can be used to conduct
+any unit root test. Setting `test="adf"` conducts ADF test, while
+`test="pp"` conducts PP test. If `test` argument is not specified, the
+`uroot()` function conducts all the test at once.

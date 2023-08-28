@@ -144,7 +144,7 @@ Please load the URooTab package as follows:
 
 The package can work with base R, R Markdown or Quarto document.
 
-## URooTab along with R Markdown or Quarto document
+# URooTab along with R Markdown or Quarto document
 
 You can use `URooTab` in an R chunk in R Markdown or Quarto document: 
 
@@ -191,9 +191,11 @@ In R Markdown or Quarto document, `URooTab` is smart enough to recognise the doc
 
 
 
-## URooTab along with base R.
+# URooTab along with base R.
 
 In base R, you can get the table printed in console in the format you specify by the  `format` argument.
+
+## The adf() function
 
 To print ADF test results in `latex` format:
 
@@ -234,6 +236,9 @@ Z & -2.379** & -2.084 & -2.938 & 0.417 & -2.013 & -0.033 & I(2)\\
 \end{tabular}
 \end{table}
 ````
+
+
+## The pp() function
 
 To print PP test results in `html` format:
 
@@ -306,3 +311,7 @@ The above code produces the following `html` codes in console:
 </tbody>
 </table>
 ```` 
+
+## The uroot() function
+
+The `uroot()` function is a generic function that can be used to conduct any unit root test. Setting `test="adf"` conducts ADF test, while `test="pp"` conducts PP test. If `test` argument is not specified, the `uroot()` function conducts all the test at once.
