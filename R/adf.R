@@ -1,6 +1,6 @@
 #' Conduct `ADF` unit root test using `EViews` routines
 #'
-#' Use this function to conduct unit root test using `EViews` routines
+#' Use this function to conduct `ADF` unit root test using `EViews` routines
 #' @inheritParams uroot
 
 #' @return An EViews workfile

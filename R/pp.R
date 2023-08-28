@@ -1,4 +1,4 @@
-#' Conduct unit root test using `EViews` routines
+#' Conduct `PP` unit root test using `EViews` routines
 #'
 #' Use this function to conduct `PP` unit root test using `EViews` routines and report it in a table.
 #' @inheritParams uroot
