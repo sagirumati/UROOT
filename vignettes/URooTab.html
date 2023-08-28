@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="Sagiru Mati, PhD" />
+
+
+<title>URooTab: Tabular Reporting of ‘EViews’ Unit Root Tests</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">URooTab: Tabular Reporting of ‘EViews’ Unit
+Root Tests</h1>
+<h4 class="author">Sagiru Mati, PhD</h4>
+<h4 class="date">Monday: August 28, 2023</h4>
+
+
+
+<style>
+.author,.date{
+color: #008753;
+font-weight: bold;
+text-align: center;
+}
+code{color:red;}
+.caption{
+text-align: center;
+}
+.title{
+color: red !important;
+width:100% !important;
+text-align: center !important;
+}
+#about-the-author{
+width: 79%;
+}
+img1 {
+border:5px solid red;
+animation: myanimation 2s infinite;
+}
+@keyframes myanimation {
+from {
+border:5px solid red;
+}
+to {
+border:5px solid yellow;
+}
+}
+img{
+border:5px solid magenta;
+}
+h1{
+text-align: center;
+border:5px solid #FFC704;
+color:DarkGreen;
+display: block;
+}
+h2{
+color:Green;
+border:5px solid yellow;
+filter: saturate(70%);
+width:80%;
+}
+h3{
+color:Green;
+border:3px solid #FFC704;
+filter: saturate(75%);
+width:44%;
+}
+}
+</style>
+<!-- <img src="../inst/figures/URooTab.png" align="right" width="120" /> -->
+<!-- <!-- badges: start -->
+<p>–&gt;</p>
+<!-- [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/URooTab)](https://cran.r-project.org/package=URooTab) -->
+<!-- [![CRAN\_Status\_Badge](https://cranlogs.r-pkg.org/badges/grand-total/URooTab?color=49C31B)](https://cranlogs.r-pkg.org/badges/grand-total/URooTab?color=49C31B) -->
+<!-- [![](https://cranlogs.r-pkg.org/badges/URooTab?color=49C31B)](https://cranlogs.r-pkg.org/badges/URooTab?color=49C31B) -->
+<!-- [![R-CMD-check](https://github.com/sagirumati/URooTab/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/sagirumati/URooTab/actions/workflows/check-standard.yaml) -->
+<!-- badges: end -->
+<p>Please do not forget to cite the package as follows:</p>
+<p><strong>Plain text:</strong></p>
+<pre><code>Mati S. (2023). URooTab: Tabular Reporting of &#39;EViews&#39; Unit Root Tests. CRAN, https://github.com/sagirumati/URooTab</code></pre>
+<p><strong>Bibtex:</strong></p>
+<pre><code>  @Manual{Mati2023,
+    title = {{URooTab}: Tabular Reporting of {EViews} Unit Root Tests},
+    author = {Sagiru Mati},
+    publisher = {CRAN},
+    url = {https://github.com/sagirumati/URooTab},
+  }</code></pre>
+<div id="about-the-author" class="section level1">
+<h1>1 About the Author</h1>
+<p>The author of this package, <strong>Sagiru Mati</strong>, obtained
+his PhD in Economics from the Near East University, North Cyprus. He
+works at the Department of Economics, Yusuf Maitama Sule (Northwest)
+University, Kano, Nigeria. Please visit his <a href="https://smati.com.ng">website</a> for more details.</p>
+<p>Please follow his publications on:</p>
+<p><a href="https://scholar.google.com/citations?user=odEp1eIAAAAJ&amp;hl=en&amp;oi=ao"><strong>Google
+Scholar</strong></a></p>
+<p><a href="https://www.researchgate.net/profile/Sagiru-Mati-2"><strong>ResearchGate</strong></a></p>
+<p><a href="https://www.webofscience.com/wos/author/record/P-3408-2017"><strong>Web
+of Science</strong></a></p>
+<p><a href="https://orcid.org/0000-0003-1413-3974"><strong>ORCID:
+0000-0003-1413-3974</strong></a></p>
+</div>
+<div id="about-urootab" class="section level1">
+<h1>2 About URooTab</h1>
+<p>URooTab is an R package that can conducts <code>EViews</code> unit
+root tests and report them in tabular form.</p>
+</div>
+<div id="why-urootab" class="section level1">
+<h1>3 Why URooTab?</h1>
+<p>While there are R packages and EViews add-ins available for
+presenting unit root tests in tabular form, none of them incorporates
+<strong>EViews</strong> procedures within the R environment.
+Specifically:</p>
+<ul>
+<li><p>I wish I could conduct unit root using EViews routines in R, R
+Markdown or Quarto document</p></li>
+<li><p>I wish I could dynamically import the results of the unit root
+tests individually or at once into R, R Markdown or Quarto document
+without switching between these applications back and forth.</p></li>
+<li><p>I wish I could use an R function to report unit root test in a
+table style suitable for publication.</p></li>
+<li><p>I wish I could automatically format the table in
+<code>Latex</code>, <code>html</code>, <code>pandoc</code> and
+<code>markdown</code>.</p></li>
+<li><p>I wish I could do all of the above from R, R Markdown or Quarto
+without opening the EViews!!!</p></li>
+</ul>
+</div>
+<div id="installation" class="section level1">
+<h1>4 Installation</h1>
+<p>URooTab can be installed using the following commands in R.</p>
+<pre><code>install.packages(&quot;URooTab&quot;)
+OR
+devtools::install_github(&quot;sagirumati/URooTab&quot;)</code></pre>
+</div>
+<div id="setup" class="section level1">
+<h1>5 Setup</h1>
+<p>To run the package successfully, you need to do one of the
+following</p>
+<ul>
+<li><p>Add EViews installation folder to path (<strong>Environment
+Variables</strong>).</p></li>
+<li><p>Don’t do anything if the name of EViews executable is one of the
+following: <code>EViews13_x64</code>, <code>EViews13_x86</code>,
+<code>EViews12_x64</code>, <code>EViews12_x86</code>,
+<code>EViews11_x64</code>, <code>EViews11_x86</code>,
+<code>EViews10_x64</code>, <code>EViews10_x86</code>,
+<code>EViews9_x64</code>, <code>EViews9_x86</code>,
+<code>EViews10</code>. The package will find the executable
+automatically.</p></li>
+<li><p>Rename the Eviews executable to <code>eviews</code> or one of the
+names above.</p></li>
+<li><p>Alternatively, you can use <code>set_eviews_path()</code>
+function to set the path the EViews executable as follows:</p></li>
+</ul>
+<!-- -->
+<pre><code>library(EviewR)
+set_eviews_path(&quot;C:/Program Files (x86)/EViews 10/EViews10.exe&quot;)</code></pre>
+</div>
+<div id="usage" class="section level1">
+<h1>6 Usage</h1>
+<p>Please load the URooTab package as follows:</p>
+<pre><code>```{r}                                                                .
+library(URooTab)
+```</code></pre>
+</div>
+<div id="ways-to-use-urootab" class="section level1">
+<h1>7 Ways to use URooTab</h1>
+<p>The package can work with base R, R Markdown or Quarto document.</p>
+</div>
+<div id="urootab-along-with-r-markdown-or-quarto-document" class="section level1">
+<h1>8 URooTab along with R Markdown or Quarto document</h1>
+<p>You can use <code>URooTab</code> in an R chunk in R Markdown or
+Quarto document:</p>
+<p>The <code>uroot()</code> function reports all the available test (ADF
+and PP) at once. It is more suitable for Quarto document, which has both
+<code>tbl-cap</code> and <code>tbl-subcap</code> chunk options.</p>
+<p>To produce Table <a href="#tab:URooTab">8.1</a>, use the R chunk
+below:</p>
+<p>Notice the chunk option <code>results: asis</code> because
+<code>uroot()</code> is designed to print all the tables (ADF and PP) in
+the chunk. If you are producing multiple <code>kable</code> tables,
+<code>results: asis</code> is necessary. You can also use
+<code>kableExtra</code> package to further customise the table.</p>
+<pre><code>    ```{r}
+    #| label: URooTab
+    #| eval: true
+    #| results: asis
+        
+    library(URooTab)
+    set.seed(1234) # for reproducibility
+    x=rnorm(100)
+    y=cumsum(x)
+    z=cumsum(y)
+
+    dataFrame=data.frame(x,y,z)
+    uroot(dataFrame, caption = &quot;Unit Root Tests for x, y and Z&quot;)
+    ```</code></pre>
+<table style="width:100%;">
+<caption>
+<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
+</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">
+Variables
+</th>
+<th style="text-align: left;">
+None
+</th>
+<th style="text-align: left;">
+Constant
+</th>
+<th style="text-align: left;">
+Constant and trend
+</th>
+<th style="text-align: left;">
+None
+</th>
+<th style="text-align: left;">
+Constant
+</th>
+<th style="text-align: left;">
+Constant and trend
+</th>
+<th style="text-align: left;">
+Decision
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">
+X
+</td>
+<td style="text-align: left;">
+-8.300***
+</td>
+<td style="text-align: left;">
+-8.396***
+</td>
+<td style="text-align: left;">
+-8.815***
+</td>
+<td style="text-align: left;">
+-8.274***
+</td>
+<td style="text-align: left;">
+-8.239***
+</td>
+<td style="text-align: left;">
+-8.214***
+</td>
+<td style="text-align: left;">
+I(0)
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+Y
+</td>
+<td style="text-align: left;">
+0.417
+</td>
+<td style="text-align: left;">
+-1.907
+</td>
+<td style="text-align: left;">
+0.026
+</td>
+<td style="text-align: left;">
+-8.148***
+</td>
+<td style="text-align: left;">
+-8.259***
+</td>
+<td style="text-align: left;">
+-8.721***
+</td>
+<td style="text-align: left;">
+I(1)
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+Z
+</td>
+<td style="text-align: left;">
+-2.379**
+</td>
+<td style="text-align: left;">
+-2.084
+</td>
+<td style="text-align: left;">
+-2.938
+</td>
+<td style="text-align: left;">
+0.417
+</td>
+<td style="text-align: left;">
+-2.013
+</td>
+<td style="text-align: left;">
+-0.033
+</td>
+<td style="text-align: left;">
+I(2)
+</td>
+</tr>
+</tbody>
+</table>
+<p><span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and
+Z</p>
+<table>
+<caption>
+<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
+</caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">
+Variables
+</th>
+<th style="text-align: left;">
+None
+</th>
+<th style="text-align: left;">
+Constant
+</th>
+<th style="text-align: left;">
+Constant and trend
+</th>
+<th style="text-align: left;">
+None
+</th>
+<th style="text-align: left;">
+Constant
+</th>
+<th style="text-align: left;">
+Constant and trend
+</th>
+<th style="text-align: left;">
+Decision
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">
+X
+</td>
+<td style="text-align: left;">
+-8.327***
+</td>
+<td style="text-align: left;">
+-8.418***
+</td>
+<td style="text-align: left;">
+-8.815***
+</td>
+<td style="text-align: left;">
+-42.502***
+</td>
+<td style="text-align: left;">
+-51.961***
+</td>
+<td style="text-align: left;">
+-74.206***
+</td>
+<td style="text-align: left;">
+I(0)
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+Y
+</td>
+<td style="text-align: left;">
+0.275
+</td>
+<td style="text-align: left;">
+-1.857
+</td>
+<td style="text-align: left;">
+-0.066
+</td>
+<td style="text-align: left;">
+-8.170***
+</td>
+<td style="text-align: left;">
+-8.275***
+</td>
+<td style="text-align: left;">
+-8.721***
+</td>
+<td style="text-align: left;">
+I(1)
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+Z
+</td>
+<td style="text-align: left;">
+6.659
+</td>
+<td style="text-align: left;">
+3.450
+</td>
+<td style="text-align: left;">
+-3.516**
+</td>
+<td style="text-align: left;">
+0.274
+</td>
+<td style="text-align: left;">
+-1.956
+</td>
+<td style="text-align: left;">
+-0.109
+</td>
+<td style="text-align: left;">
+I(2)
+</td>
+</tr>
+</tbody>
+</table>
+<p><span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and
+Z</p>
+<p>In R Markdown or Quarto document, <code>URooTab</code> is smart
+enough to recognise the document format and select the suitable table
+format.</p>
+</div>
+<div id="urootab-along-with-base-r." class="section level1">
+<h1>9 URooTab along with base R.</h1>
+<p>In base R, you can get the table printed in console in the format you
+specify by the <code>format</code> argument.</p>
+<p>We can create a dataframe as follows:</p>
+<pre><code>library(URooTab)
+set.seed(1234)  # for reproducibility
+x = rnorm(100)
+y = cumsum(x)
+z = cumsum(y)
+dataFrame = data.frame(x, y, z)</code></pre>
+<div id="the-adf-function" class="section level2">
+<h2>9.1 The adf() function</h2>
+<p>To print ADF test results in <code>latex</code> format:</p>
+<pre><code>adf(dataFrame, format = &quot;latex&quot;, info = &quot;aic&quot;, caption = &quot;ADF Unit Root Tests for x, y and Z&quot;)</code></pre>
+<p>Or</p>
+<pre><code>uroot(dataFrame, format = &quot;latex&quot;, test = &quot;adf&quot;, info = &quot;aic&quot;,
+    caption = &quot;ADF Unit Root Tests for x, y and Z&quot;)</code></pre>
+<p>The above code produces the following latex code:</p>
+<pre><code>\begin{table}[h]
+
+\caption{ADF Unit Root Tests for x, y and Z}
+\centering
+\begin{tabular}[t]{llllllll}
+\toprule
+Variables &amp; None &amp; Constant &amp; Constant and trend &amp; None &amp; Constant &amp; Constant and trend &amp; Decision\\
+\midrule
+X &amp; -8.300*** &amp; -8.396*** &amp; -8.815*** &amp; -7.494*** &amp; -7.460*** &amp; -7.445*** &amp; I(0)\\
+Y &amp; 0.224 &amp; -1.934 &amp; 0.026 &amp; -8.148*** &amp; -8.259*** &amp; -8.721*** &amp; I(1)\\
+Z &amp; -2.379** &amp; -2.084 &amp; -2.938 &amp; 0.233 &amp; -2.221 &amp; -0.033 &amp; I(2)\\
+\bottomrule
+\end{tabular}
+\end{table}</code></pre>
+</div>
+<div id="the-pp-function" class="section level2">
+<h2>9.2 The pp() function</h2>
+<p>To print PP test results in <code>html</code> format:</p>
+<pre><code>pp(dataFrame, format = &quot;html&quot;, info = &quot;aic&quot;, caption = &quot;PP Unit Root Tests for x, y and Z&quot;)</code></pre>
+<p>Or</p>
+<pre><code>uroot(dataFrame, format = &quot;html&quot;, info = &quot;aic&quot;, test = &quot;pp&quot;,
+    caption = &quot;PP Unit Root Tests for x, y and Z&quot;)</code></pre>
+<p>The above code produces the following <code>html</code> codes in
+console:</p>
+<pre><code>&lt;table&gt;
+&lt;caption&gt;PP Unit Root Tests for x, y and Z&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Variables &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; None &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Constant &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Constant and trend &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; None &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Constant &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Constant and trend &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Decision &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; X &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -8.327*** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -8.418*** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -8.815*** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -42.502*** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -51.961*** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -74.206*** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; I(0) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Y &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 0.275 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -1.857 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -0.066 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -8.170*** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -8.275*** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -8.721*** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; I(1) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Z &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 6.659 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 3.450 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -3.516** &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 0.274 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -1.956 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; -0.109 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; I(2) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+<div id="the-uroot-function" class="section level2">
+<h2>9.3 The uroot() function</h2>
+<p>The <code>uroot()</code> function is a generic function that can be
+used to conduct any unit root test. Setting <code>test=&quot;adf&quot;</code>
+conducts ADF test, while <code>test=&quot;pp&quot;</code> conducts PP test. If
+<code>test</code> argument is not specified, the <code>uroot()</code>
+function conducts all the test at once.</p>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
