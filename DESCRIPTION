@@ -6,7 +6,7 @@ Imports: EviewsR, knitr, magrittr, xts, zoo
 Authors@R: c(
     person("Sagiru", "Mati", role = c("aut", "cre"), email = "sagirumati@gmail.com",comment=c(ORCID="0000-0003-1413-3974")))
 Maintainer: Sagiru Mati <sagirumati@gmail.com>
-Description: Conduct unit root tests based on 'EViews' (<https://eviews.com>) routines and report them in tables. EViews (Econometric Views) is a commercial software for econometrics.
+Description: Conduct unit root tests based on 'EViews' (<https://eviews.com>) routines and report them in tables. 'EViews' (Econometric Views) is a commercial software for econometrics.
 Depends: R (>= 3.4.0)
 Suggests: rmarkdown, testthat
 License: GPL
