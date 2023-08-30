@@ -28,17 +28,21 @@ eviews_path=function(){
 }
 
 
-# eviews_string
+# eviews_strings
 
 eviews_string=function(x) x %>% get %>% shQuote_cmd %>% paste0('%',x,'=',.) %>% assign(x,.)
 
 # kable_format
 
 kable_format <- function(){
-  if(opts_knit$get("rmarkdown.pandoc.to")=="docx") format="pandoc"
-  if(opts_knit$get("rmarkdown.pandoc.to")=="latex") format="latex"
-  if(opts_knit$get("rmarkdown.pandoc.to")=="html") format="html"
+  # if(opts_knit$get("rmarkdown.pandoc.to")=="docx") format="pandoc"
+  # if(opts_knit$get("rmarkdown.pandoc.to")=="latex") format="latex"
+  # if(opts_knit$get("rmarkdown.pandoc.to")=="html") format="html"
+  if(is_html_output()) format="html"
+  if(is_latex_output()) format="latex"
+  if(!is_latex_output() && !is_html_output()) format="pandoc"
   return(format)
+
 }
 
 
@@ -56,7 +60,8 @@ if(!exists("engine_path")) set_eviews_path()
 fileName=eval(expression(fileName),envir = parent.frame()) # Dynamic scoping
 engine_path=eval(expression(engine_path),envir = parent.frame())
 
-getwd() %>% paste0(.,"/",fileName) %>% shQuote_cmd() %>%
+
+fileName %>% shQuote_cmd() %>% # changed from `getwd() %>% paste0(.,"/",fileName) %>% ...`
   paste("exec",.) %>%
 system2(set_eviews_path(engine_path),.)
 }

@@ -291,8 +291,6 @@ y and Z</caption>
 </tbody>
 </table>
 
-<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
-
 <table>
 <caption><span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x,
 y and Z</caption>
@@ -351,8 +349,6 @@ y and Z</caption>
 </tr>
 </tbody>
 </table>
-
-<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
 
 In R Markdown or Quarto document, `URooTab` is smart enough to recognise
 the document format and select the suitable table format.

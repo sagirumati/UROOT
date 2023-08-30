@@ -4,6 +4,4 @@
 
 what is new?
 
-* Updated documentation of `pp()` and `adf()` functions
-
-* Updated citation info
+* This is the initial version of the package 

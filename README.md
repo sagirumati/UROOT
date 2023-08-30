@@ -1,6 +1,6 @@
 # URooTab: URooTab: Tabular Reporting of ‘EViews’ Unit Root Tests
 
-# Monday: August 28, 2023
+# Wednesday: August 30, 2023
 
 <!-- <img src="inst/figures/URooTab.png" align="right" width="120" /> -->
 
@@ -36,11 +36,13 @@ details.
 
 Please follow his publications on:
 
-[**Google Scholar**](https://scholar.google.com/citations?user=odEp1eIAAAAJ&hl=en&oi=ao)
+[**Google
+Scholar**](https://scholar.google.com/citations?user=odEp1eIAAAAJ&hl=en&oi=ao)
 
 [**ResearchGate**](https://www.researchgate.net/profile/Sagiru-Mati-2)
 
-[**Web of Science**](https://www.webofscience.com/wos/author/record/P-3408-2017)
+[**Web of
+Science**](https://www.webofscience.com/wos/author/record/P-3408-2017)
 
 [**ORCID: 0000-0003-1413-3974**](https://orcid.org/0000-0003-1413-3974)
 
@@ -202,8 +204,6 @@ y and Z</caption>
 </tbody>
 </table>
 
-<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
-
 <table>
 <caption><span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x,
 y and Z</caption>
@@ -262,8 +262,6 @@ y and Z</caption>
 </tr>
 </tbody>
 </table>
-
-<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
 
 In R Markdown or Quarto document, `URooTab` is smart enough to recognise
 the document format and select the suitable table format.

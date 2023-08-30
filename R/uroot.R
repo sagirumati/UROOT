@@ -350,13 +350,13 @@ wfsave {%wf}
 exit
 "
 export_dataframe(dataFrame,wf=wf)
-writeLines(c(eviews_path(),series,test,wf1,info,EviewsCodes),fileName)
+writeLines(c(series,test,wf1,info,EviewsCodes),fileName)
 
 system_exec()
 unlink_eviews()
 
 wf2=wf %>% shQuote_cmd # for EViews to recognise the wf path.
-wf2=wf %>% basename()
+# wf2=wf %>% basename()
 if(length(table)>1){
 for (i in table) import_kable(wf2,table=i,caption = caption, format=format,...) %>% print
 } else import_kable(wf2,table=table,caption = caption, format=format,...)
