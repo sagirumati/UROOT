@@ -41,8 +41,7 @@ Scholar**](https://scholar.google.com/citations?user=odEp1eIAAAAJ&hl=en&oi=ao)
 
 [**ResearchGate**](https://www.researchgate.net/profile/Sagiru-Mati-2)
 
-[**Web of
-Science**](https://www.webofscience.com/wos/author/record/P-3408-2017)
+[**Web of Science**](https://www.webofscience.com/wos/author/record/P-3408-2017)
 
 [**ORCID: 0000-0003-1413-3974**](https://orcid.org/0000-0003-1413-3974)
 
