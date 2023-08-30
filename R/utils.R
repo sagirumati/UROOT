@@ -79,15 +79,15 @@ if(exists('table_name.csv',envir = parent.frame()))  table_name.csv=eval(express
 }
 
 .onAttach <- function(libname, pkgname) {
-  package_citation <- "
+  message("Thank you for using URooTab!
+
+          To acknowledge our work, please cite the package:
+
   PLAIN TEXT:
 
-  Mati, S. (2023). URooTab: Tabular Reporting of 'EViews' Unit Root Tests. CRAN. URL: https://CRAN.R-project.org/package=URooTab"
-  message("Thank you for using URooTab!")
-  message("
-          To acknowledge our work, please cite the package:")
-  message(package_citation)
-  message("
+  Mati, S. (2023). URooTab: Tabular Reporting of 'EViews' Unit Root Tests. CRAN. URL: https://CRAN.R-project.org/package=URooTab
+
+
   BIBTEX:
 
   @Manual{Mati2023,
@@ -96,7 +96,8 @@ if(exists('table_name.csv',envir = parent.frame()))  table_name.csv=eval(express
     year = {2023},
     note = {R package version 0.1.0},
     url = {https://github.com/sagirumati/URooTab},
-  }")
+  }"
+  )
 
 }
 
