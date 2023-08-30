@@ -6,7 +6,7 @@
 #' @return An EViews workfile
 #'
 #' @examples library(URooTab)
-#' \dontrun{
+#' \donttest{
 #' set.seed(1234)
 #' x=rnorm(100)
 #' y=cumsum(x)

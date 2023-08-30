@@ -2,7 +2,7 @@
 % Please edit documentation in R/pp.R
 \name{pp}
 \alias{pp}
-\title{Conduct unit root test using \code{EViews} routines}
+\title{Conduct \code{PP} unit root test using \code{EViews} routines}
 \usage{
 pp(series, info = "sic", caption = NULL, format = kable_format(), ...)
 }
@@ -25,7 +25,7 @@ Use this function to conduct \code{PP} unit root test using \code{EViews} routin
 }
 \examples{
 library(URooTab)
-\dontrun{
+\donttest{
 set.seed(1234)
 x=rnorm(100)
 y=cumsum(x)

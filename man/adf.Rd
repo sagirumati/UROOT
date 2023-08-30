@@ -21,11 +21,11 @@ adf(series, info = "sic", caption = NULL, format = kable_format(), ...)
 An EViews workfile
 }
 \description{
-Use this function to conduct unit root test using \code{EViews} routines
+Use this function to conduct \code{ADF} unit root test using \code{EViews} routines
 }
 \examples{
 library(URooTab)
-\dontrun{
+\donttest{
 set.seed(1234)
 x=rnorm(100)
 y=cumsum(x)

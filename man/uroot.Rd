@@ -34,7 +34,7 @@ Use this function to conduct unit root test using \code{EViews} routines
 }
 \examples{
 library(URooTab)
-\dontrun{
+\donttest{
 set.seed(1234)
 x=rnorm(100)
 y=cumsum(x)

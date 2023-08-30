@@ -11,7 +11,7 @@
 #' @return An EViews workfile
 #'
 #' @examples library(URooTab)
-#' \dontrun{
+#' \donttest{
 #' set.seed(1234)
 #' x=rnorm(100)
 #' y=cumsum(x)
@@ -33,11 +33,11 @@ uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,format=kable
    test=paste(test,collapse = " ")
 
 
-wf=tempfile("UROOTAB",".",fileext = ".wf1")
+wf=tempfile("UROOTAB",fileext = ".wf1")
 on.exit(unlink(wf))
 wf1= paste0("%wf=", shQuote_cmd(wf))
 
-fileName=tempfile("URooTab",".",fileext = ".prg")
+fileName=tempfile("URooTab",fileext = ".prg")
 series= paste0("%series=", shQuote_cmd(series))
 test= paste0("%test=", shQuote_cmd(test))
 info= paste0("%info=", shQuote_cmd(info))
@@ -351,8 +351,8 @@ writeLines(c(eviews_path(),series,test,wf1,info,EviewsCodes),fileName)
 system_exec()
 unlink_eviews()
 
-wf2=paste0(getwd(),"\\",wf) %>% shQuote_cmd # for EViews to recognise the wf path.
-
+wf2=wf %>% shQuote_cmd # for EViews to recognise the wf path.
+wf2=wf %>% basename()
 if(length(table)>1){
 for (i in table) import_kable(wf2,table=i,caption = caption, format=format,...) %>% print
 } else import_kable(wf2,table=table,caption = caption, format=format,...)
