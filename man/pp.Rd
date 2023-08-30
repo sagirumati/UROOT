@@ -31,7 +31,11 @@ x=rnorm(100)
 y=cumsum(x)
 z=cumsum(y)
 dataFrame=data.frame(x,y,z)
-pp(series=dataFrame,format="html",info="hq")
+
+# Check if `EViews` is installed before running the tests
+
+eviewsExecutables=c('eviews','eviews10',paste0('Eviews',9:13,'_X',c(86,64)))
+if(any(Sys.which(eviewsExecutables)!="")) pp(series=dataFrame,format="html",info="hq")
 }
 }
 \seealso{

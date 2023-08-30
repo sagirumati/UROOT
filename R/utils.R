@@ -79,7 +79,7 @@ if(exists('table_name.csv',envir = parent.frame()))  table_name.csv=eval(express
 }
 
 .onAttach <- function(libname, pkgname) {
-  message("Thank you for using URooTab!
+  packageStartupMessage("Thank you for using URooTab!
 
           To acknowledge our work, please cite the package:
 
@@ -91,7 +91,7 @@ if(exists('table_name.csv',envir = parent.frame()))  table_name.csv=eval(express
   BIBTEX:
 
   @Manual{Mati2023,
-    title = {URooTab: Tabular Reporting of 'EViews' Unit Root Tests},
+    title = {{URooTab}: Tabular Reporting of {EViews} Unit Root Tests},
     author = {Sagiru Mati},
     year = {2023},
     note = {R package version 0.1.0},

@@ -40,7 +40,11 @@ x=rnorm(100)
 y=cumsum(x)
 z=cumsum(y)
 dataFrame=data.frame(x,y,z)
-uroot(series=dataFrame,format="markdown",info="sic")
+
+# Check if `EViews` is installed before running the tests
+
+eviewsExecutables=c('eviews','eviews10',paste0('Eviews',9:13,'_X',c(86,64)))
+if(any(Sys.which(eviewsExecutables)!="")) uroot(series=dataFrame,format="markdown",info="sic")
 
 }
 }
