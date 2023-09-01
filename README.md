@@ -1,14 +1,15 @@
-# URooTab: URooTab: Tabular Reporting of ‘EViews’ Unit Root Tests
+# URooTab: Tabular Reporting of ‘EViews’ Unit Root Tests
 
-# Wednesday: August 30, 2023
+# Friday: September 01, 2023
 
 <!-- <img src="inst/figures/URooTab.png" align="right" width="120" /> -->
 
 <!-- badges: start -->
-<!-- [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/URooTab)](https://cran.r-project.org/package=URooTab) -->
-<!-- [![CRAN_Status_Badge](https://cranlogs.r-pkg.org/badges/grand-total/URooTab?color=49C31B)](https://cranlogs.r-pkg.org/badges/grand-total/URooTab?color=49C31B) -->
-<!-- [![](https://cranlogs.r-pkg.org/badges/URooTab?color=49C31B)](https://cranlogs.r-pkg.org/badges/URooTab?color=49C31B) -->
-<!-- [![R-CMD-check](https://github.com/sagirumati/URooTab/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/sagirumati/URooTab/actions/workflows/check-standard.yaml) -->
+
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/URooTab)](https://cran.r-project.org/package=URooTab)
+[![CRAN\_Status\_Badge](https://cranlogs.r-pkg.org/badges/grand-total/URooTab?color=49C31B)](https://cranlogs.r-pkg.org/badges/grand-total/URooTab?color=49C31B)
+[![](https://cranlogs.r-pkg.org/badges/URooTab?color=49C31B)](https://cranlogs.r-pkg.org/badges/URooTab?color=49C31B)
+[![R-CMD-check](https://github.com/sagirumati/URooTab/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/sagirumati/URooTab/actions/workflows/check-standard.yaml)
 <!-- badges: end -->
 
 Please do not forget to cite the package as follows:
@@ -41,7 +42,8 @@ Scholar**](https://scholar.google.com/citations?user=odEp1eIAAAAJ&hl=en&oi=ao)
 
 [**ResearchGate**](https://www.researchgate.net/profile/Sagiru-Mati-2)
 
-[**Web of Science**](https://www.webofscience.com/wos/author/record/P-3408-2017)
+[**Web of
+Science**](https://www.webofscience.com/wos/author/record/P-3408-2017)
 
 [**ORCID: 0000-0003-1413-3974**](https://orcid.org/0000-0003-1413-3974)
 
@@ -203,6 +205,8 @@ y and Z</caption>
 </tbody>
 </table>
 
+<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
+
 <table>
 <caption><span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x,
 y and Z</caption>
@@ -261,6 +265,8 @@ y and Z</caption>
 </tr>
 </tbody>
 </table>
+
+<span id="tab:URooTab"></span>Table 8.1: Unit Root Tests for x, y and Z
 
 In R Markdown or Quarto document, `URooTab` is smart enough to recognise
 the document format and select the suitable table format.
