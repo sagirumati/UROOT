@@ -10,6 +10,8 @@
 [![CRAN\_Status\_Badge](https://cranlogs.r-pkg.org/badges/grand-total/URooTab?color=49C31B)](https://cranlogs.r-pkg.org/badges/grand-total/URooTab?color=49C31B)
 [![](https://cranlogs.r-pkg.org/badges/URooTab?color=49C31B)](https://cranlogs.r-pkg.org/badges/URooTab?color=49C31B)
 [![R-CMD-check](https://github.com/sagirumati/URooTab/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/sagirumati/URooTab/actions/workflows/check-standard.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/UROOT)](https://CRAN.R-project.org/package=UROOT)
 <!-- badges: end -->
 
 Please do not forget to cite the package as follows:
