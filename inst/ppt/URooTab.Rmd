@@ -4,7 +4,6 @@ date: '`r format(Sys.Date(), "%A: %B %d,  %Y")`'
 output: bookdown::pdf_document2
 ---
 
-
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
