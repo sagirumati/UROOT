@@ -1,0 +1,62 @@
+---
+title: "URooTab: Tabular Reporting of EViews Unit Root Tests"
+date: '`r format(Sys.Date(), "%A: %B %d,  %Y")`'
+output: bookdown::pdf_document2
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>", 
+  echo = T,
+  eval=T,
+  out.width = "45%",
+  out.height = "20%",
+  fig.show="hold",
+  fig.align = "center",
+  dpi = 300,
+  tidy = TRUE,
+  tidy.opts = list(blank = FALSE, width.cutoff = 60),
+  fig.ncol= 2,
+  fig.path = 'inst/figures/'
+)
+library(URooTab)
+# set_eviews_path('EViews12_X64')
+library(knitr)
+```
+
+
+# Example tables
+
+Below are some of the tables automatically imported into the document by URooTab package
+
+ADF test is reported in  Table \@ref(tab:ADF)
+
+```{r}
+#| label: ADF
+#| eval: true
+#| results: asis
+#| echo: false
+    
+library(URooTab)
+set.seed(1234) # for reproducibility
+x=rnorm(100)
+y=cumsum(x)
+z=cumsum(y)
+
+dataFrame=data.frame(x,y,z)
+adf(dataFrame,format = "markdown", caption = "Unit Root Tests for x, y and Z")
+```
+
+To report the PP test as in Table \@ref(tab:PP)
+
+```{r}
+#| label: PP
+#| eval: true
+#| results: asis
+#| echo: false
+   
+pp(dataFrame,format = "markdown", caption = "Unit Root Tests for x, y and Z")
+```
+
