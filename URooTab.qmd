@@ -3,10 +3,11 @@ title: "URooTab: Tabular Reporting of EViews Unit Root Tests"
 author: Sagiru Mati
 date: "August 30, 2023"
 format: pdf
+bibliography: references.bib
 execute: 
  cache: true
  echo: fenced
-  
+
 ---
 
 
@@ -327,3 +328,8 @@ The above code produces the following `html` codes in console:
 ## The uroot() function
 
 The `uroot()` function is a generic function that can be used to conduct any unit root test. Setting `test="adf"` conducts ADF test, while `test="pp"` conducts PP test. If `test` argument is not specified, the `uroot()` function conducts all the test at once.
+
+Similar packages include DynareR [@Mati2019], EviewsR [@Mati2019a;@Mati2023], and gretlR [@Mati2019b].
+
+
+# References {-}

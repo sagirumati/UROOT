@@ -1,0 +1,25 @@
+
+@Manual{Mati2019a,
+    title = {EviewsR: A Seamless Integration of {EViews} and {R}},
+    author = {Sagiru Mati},
+    year = {2019},
+    note = {R package version 0.1.5},
+    url = {https://CRAN.R-project.org/package=EviewsR},
+  }
+
+ @Article{Mati2019,
+    title = {DynareR: Bringing the Power of Dynare to R, R Markdown, and
+Quarto},
+    author = {Sagiru Mati},
+    year = {2019},
+    journal = {CRAN},
+    url = {https://CRAN.R-project.org/package=DynareR},
+  }
+
+ @Manual{Mati2019b,
+    title = {gretlR: A Seamless Integration of {Gretl} and {R}},
+    author = {Sagiru Mati},
+    year = {2019},
+    note = {R package version 0.1.4},
+    url = {https://CRAN.R-project.org/package=gretlR},
+  }
