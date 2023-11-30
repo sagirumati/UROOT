@@ -143,7 +143,7 @@ Please load the URooTab package as follows:
 
 # Ways to use URooTab
 
-The package can work with base R, R Markdown or Quarto document.
+The package can work with base R, R Markdown or Quarto document. The package has been used by @Mati2019, @Mati2021, @Mati2023b, @Mati2023c and @Mati2019.
 
 
 
