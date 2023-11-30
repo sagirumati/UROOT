@@ -1,6 +1,6 @@
 # URooTab: Tabular Reporting of ‘EViews’ Unit Root Tests
 
-# Friday: September 01, 2023
+# Thursday: November 30, 2023
 
 <!-- <img src="inst/figures/URooTab.png" align="right" width="120" /> -->
 
@@ -380,3 +380,45 @@ The `uroot()` function is a generic function that can be used to conduct
 any unit root test. Setting `test="adf"` conducts ADF test, while
 `test="pp"` conducts PP test. If `test` argument is not specified, the
 `uroot()` function conducts all the test at once.
+
+# 10 Similar Packages
+
+Similar packages include
+[DynareR](https://github.com/sagirumati/DynareR) (Mati 2020a, 2022a),
+[gretlR](https://github.com/sagirumati/gretlR) (Mati 2020c, 2022c), and
+[EviewsR](https://github.com/sagirumati/EviewsR) (Mati 2022b, 2020b;
+Mati, Civcir, and Abba 2023)
+
+For further details, consult Mati (2023b) and Mati (2023a).
+
+# References
+
+Mati, Sagiru. 2020a. “DynareR: Bringing the Power of Dynare to
+<span class="nocase">R, R Markdown, and Quarto</span>.” *CRAN*.
+<https://CRAN.R-project.org/package=DynareR>.
+
+———. 2020b. *EviewsR: A Seamless Integration of EViews and R*.
+<https://CRAN.R-project.org/package=EviewsR>.
+
+———. 2020c. *gretlR: A Seamless Integration of Gretl and R*.
+<https://CRAN.R-project.org/package=gretlR>.
+
+———. 2022a. “Package ‘DynareR’.”
+<https://cran.r-project.org/web/packages/DynareR/DynareR.pdf>.
+
+———. 2022b. “Package ‘EviewsR’.”
+<https://cran.r-project.org/web/packages/EviewsR/EviewsR.pdf>.
+
+———. 2022c. “Package ‘gretlR’.”
+<https://cran.r-project.org/web/packages/gretlR/gretlR.pdf>.
+
+———. 2023a. “Package ‘URooTab’.”
+<https://cran.r-project.org/web/packages/URooTab/URooTab.pdf>.
+
+———. 2023b. *URooTab: Tabular Reporting of EViews Unit Root Tests*.
+<https://github.com/sagirumati/URooTab>.
+
+Mati, Sagiru, Irfan Civcir, and S. I. Abba. 2023. “EviewsR: An r Package
+for Dynamic and Reproducible Research Using EViews, r, r Markdown and
+Quarto.” *The R Journal* 15 (2): 169–205.
+<https://doi.org/10.32614/rj-2023-045>.
