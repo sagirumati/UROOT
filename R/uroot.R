@@ -27,7 +27,7 @@
 #' @keywords documentation
 #' @export
 
-uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,format=kable_format(),...) {
+uroot <- function(series,test=c("adf","pp"),info="sic",caption=NULL,table_type="kable",format=kable_format(),...) {
   if(is.data.frame(series)) dataFrame=series else dataFrame=as.data.frame(series)
 
 
@@ -357,9 +357,16 @@ unlink_eviews()
 
 wf2=wf %>% shQuote_cmd # for EViews to recognise the wf path.
 # wf2=wf %>% basename()
+
+if(table_type=="df"){
+  import_kable(wf2)
+}
+
+if(table_type=="kable"){
 if(length(table)>1){
 for (i in table) import_kable(wf2,table=i,caption = caption, format=format,...) %>% print
 } else import_kable(wf2,table=table,caption = caption, format=format,...)
+}
 
 }
 
