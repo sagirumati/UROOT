@@ -2,6 +2,7 @@
 title: "URooTab: Tabular Reporting of 'EViews' Unit Root Tests"
 date: '`r format(Sys.Date(), "%A: %B %d,  %Y")`'
 output: bookdown::markdown_document2  #bookdown::word_document2
+bibliography: references.bib
 ---
 
 
@@ -142,7 +143,7 @@ Please load the URooTab package as follows:
 
 # Ways to use URooTab
 
-The package can work with base R, R Markdown or Quarto document.
+The package can work with base R, R Markdown or Quarto document. The package has been used by @Mati2019, @Mati2021, @Mati2023b, @Mati2023c and @Mati2019.
 
 
 
@@ -333,3 +334,15 @@ The above code produces the following `html` codes in console:
 ## The uroot() function
 
 The `uroot()` function is a generic function that can be used to conduct any unit root test. Setting `test="adf"` conducts ADF test, while `test="pp"` conducts PP test. If `test` argument is not specified, the `uroot()` function conducts all the test at once.
+
+
+
+
+# Similar Packages
+
+Similar packages include [DynareR](https://github.com/sagirumati/DynareR) [@Mati2020;@mati2022dynarer], [gretlR](https://github.com/sagirumati/gretlR) [@Mati2020b;@mati2022gretlr], and  [EviewsR](https://github.com/sagirumati/EviewsR) [@mati2022eviewsr;@Mati2020a;@Mati2023]
+
+For further details, consult @Mati2023a and @mati2023urootab.
+
+
+# References {-}
