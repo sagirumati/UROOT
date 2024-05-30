@@ -22,8 +22,8 @@
 #' @keywords documentation
 #' @export
 
-adf <- function(series,info="sic",caption=NULL,format=kable_format(),...) {
+adf <- function(series,info="sic",caption=NULL,table_type="kable",format=kable_format(),...) {
 
-uroot(series,test="adf",info=info,caption=caption,format=format,...)
+uroot(series,test="adf",info=info,caption=caption,table_type = table_type,format=format,...)
 }
 

@@ -22,8 +22,8 @@
 #' @keywords documentation
 #' @export
 
-pp <- function(series,info="sic",caption=NULL,format=kable_format(),...) {
+pp <- function(series,info="sic",caption=NULL,table_type="kable",format=kable_format(),...) {
 
-uroot(series,test="pp",info=info,caption=caption,format=format,...)
+uroot(series,test="pp",info=info,table_type = table_type,caption=caption,format=format,...)
 }
 
